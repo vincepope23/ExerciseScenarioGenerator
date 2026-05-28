@@ -46,13 +46,3 @@ Ausgabeformat (Markdown):
 ## Szenario: [Titel]
 **Gefahr:** [Gefahrentyp]
 **Schwerestufe:** 2 – gross
-
----
-
-### Phase 1: [Phasenname]
-[Merkmale dieser Phase]
-
-### Phase 2: [Phasenname]
-[Merkmale dieser Phase]
-
-...
