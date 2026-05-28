@@ -1,4 +1,5 @@
 import streamlit as st
+from scenariogenerator.backend.user_actions import get_gefahr_options, get_prompt, generate_szenario
 
 # Set up page layout to wide to comfortably fit the side-by-side design
 st.set_page_config(
@@ -60,7 +61,8 @@ with left_col:
     st.subheader("Szenario")
     
     # 1. Gefahr Dropdown
-    gefahr_options = ["Lawinen", "Überflutung", "Gletscherabbruch", "Erdbeben", "Steinschlag"]
+     #gefahr_options = ["Lawinen", "Überflutung", "Gletscherabbruch", "Erdbeben", "Steinschlag"]
+    gefahr_options = get_gefahr_options()
     selected_gefahr = st.selectbox("Gefahr (Hazard)", gefahr_options)
     
     # 2. Location Dropdown
@@ -69,12 +71,13 @@ with left_col:
     
     # NEW FEATURE: Refresh Button for the Prompt
     if st.button("Aktuellisieren"):
-        st.session_state.ausgangslage_text = (
-            f"Aufgrund des Ereignisses '{selected_gefahr}' in der Region {selected_locato} "
-            f"ist die Lage unübersichtlich. Erste zivile Notrufe gehen ein, und die "
-            f"wichtigsten Zufahrtsstrassen sind aktuell nicht passierbar. Die Blaulichtorganisationen "
-            f"benötigen umgehend Anweisungen zur Priorisierung."
-        )
+        # st.session_state.ausgangslage_text = (
+        #     f"Aufgrund des Ereignisses '{selected_gefahr}' in der Region {selected_locato} "
+        #    f"ist die Lage unübersichtlich. Erste zivile Notrufe gehen ein, und die "
+        #    f"wichtigsten Zufahrtsstrassen sind aktuell nicht passierbar. Die Blaulichtorganisationen "
+        #     f"benötigen umgehend Anweisungen zur Priorisierung."
+        # )
+        st.session_state.ausgangslage_text = get_prompt(selected_gefahr)
 
     # 3. Prompt text editable (Ausgangslage) - Now tied to session_state key
     editable_prompt = st.text_area("Ausgangslage (bearbeitbar)", key="ausgangslage_text", height=140)
@@ -101,4 +104,5 @@ with right_col:
     st.markdown(
         f'<div class="scenario-box">{st.session_state.generated_scenario}</div>', 
         unsafe_allow_html=True
+
     )

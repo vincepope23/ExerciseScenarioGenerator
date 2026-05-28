@@ -1,8 +1,8 @@
 
 
-from backend.constants import INDEX_FILE, DATA_DIR, RELEVANT_SECTIONS
-from backend.llm_client import llm_client_factory
-from backend.load_prompts import load_szenario_verlauf_prompt, get_file_path
+from scenariogenerator.backend.constants import INDEX_FILE, DATA_DIR, RELEVANT_SECTIONS
+from scenariogenerator.backend.llm_client import llm_client_factory
+from scenariogenerator.backend.load_prompts import load_szenario_verlauf_prompt, get_file_path
 
 
 def get_gefahr_options():

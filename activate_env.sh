@@ -14,12 +14,12 @@ if ! source .venv/bin/activate; then
     exit 1
 fi
 
-# Install/Update dependencies from requirements.txt
-if [ -f "requirements.txt" ]; then
-    echo "Installing/Updating dependencies from requirements.txt..."
-    pip install -r requirements.txt
+# Install/Update dependencies from pyproject.toml
+if [ -f "pyproject.toml" ]; then
+    echo "Installing/Updating dependencies from pyproject.toml..."
+    pip install -e .
 else
-    echo "Warning: requirements.txt not found. Skipping dependency installation." >&2
+    echo "Warning: pyproject.toml not found. Skipping dependency installation." >&2
 fi
 
 echo "Virtual environment '.venv' is activated."
