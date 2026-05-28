@@ -1,7 +1,10 @@
 import re
+from pathlib import Path
+
 
 def load_szenario_verlauf_prompt() -> str:
-    with open("scenariogenerator/prompts/szenario_verlauf_prompt.txt", "r", encoding="utf-8") as f:
+    prompt_path = Path("scenariogenerator") / "prompts" / "szenario_verlauf_prompt.txt"
+    with open(prompt_path, "r", encoding="utf-8") as f:
         return f.read()
 
 def get_file_path(keyword: str, markdown_text: str) -> str | None:
