@@ -6,3 +6,6 @@ pdfplumber
 pyyaml
 mistralai
 python-dotenv
+streamlit
+openai
+claude-api

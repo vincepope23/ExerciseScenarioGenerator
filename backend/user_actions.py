@@ -1,8 +1,9 @@
-import re
+
 
 from backend.constants import INDEX_FILE, DATA_DIR, RELEVANT_SECTIONS
 from backend.llm_client import llm_client_factory
-from backend.load_prompts import load_szenario_verlauf_prompt
+from backend.load_prompts import load_szenario_verlauf_prompt, get_file_path
+
 
 def get_gefahr_options():
     return [
@@ -12,11 +13,6 @@ def get_gefahr_options():
         "Starker Schneefall",
         "Starkregen"
     ]
-
-def get_file_path(keyword: str, markdown_text: str) -> str | None:
-    pattern = rf'\[{keyword}\]\((.*?)\)'
-    match = re.search(pattern, markdown_text)
-    return match.group(1) if match else None
 
 def get_prompt(gefahr: str) -> str:
     scenario_prompt = load_szenario_verlauf_prompt()
