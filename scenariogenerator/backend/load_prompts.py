@@ -3,7 +3,8 @@ from pathlib import Path
 
 
 def load_szenario_verlauf_prompt() -> str:
-    prompt_path = Path("scenariogenerator") / "prompts" / "szenario_verlauf_prompt.txt"
+    module_dir = Path(__file__).parent.parent
+    prompt_path = module_dir / "prompts" / "szenario_verlauf_prompt.txt"
     with open(prompt_path, "r", encoding="utf-8") as f:
         return f.read()
 
