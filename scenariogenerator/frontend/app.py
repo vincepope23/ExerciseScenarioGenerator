@@ -53,6 +53,7 @@ with left_col:
     
     # 1. Gefahr Dropdown
     gefahr_options = ["Lawinen", "Überflutung", "Gletscherabbruch", "Erdbeben", "Steinschlag"]
+    #gefahr_options = get_gefahr_options()
     selected_gefahr = st.selectbox("Gefahr (Hazard)", gefahr_options)
     
     # 2. Location Dropdown
@@ -65,6 +66,7 @@ with left_col:
         "Eine koordinierte Rettungsaktion wird notwendig, bei der die lokalen Behörden "
         "schnell reagieren müssen."
     )
+    #default_prompt =
     editable_prompt = st.text_area("Ausgangslage (bearbeitbar)", value=default_prompt, height=140)
     
     st.write("") # Layout spacer

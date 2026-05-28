@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scenariogenerator"
+version = "0.1.0"
+description = "Your project description"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas",
+    "jupyter",
+    "ipykernel",
+    "ollama",
+    "pdfplumber",
+    "pyyaml",
+    "mistralai",
+    "python-dotenv",
+    "streamlit",
+    "openai",
+    "anthropic",  # Required for claude-api
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "mypy",
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
