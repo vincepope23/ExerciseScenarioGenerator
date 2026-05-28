@@ -1,0 +1,16 @@
+Im folgenden Text wirst du wichtige Informationen finden über Phasen, Schwerestufen und Einflussfaktoren eines Gefährdungsszenarios.
+Unsere Aufgabe ist die Konzipierung von verschiedenen Szenarien für eine Übung für den Ernstfall.
+
+Wir benötigen ein Szenario mit {gefahr} mit vier Verlaufsphasen: Vorphase, Hauptphase tiefere Eskalationsstufe, Hauptphase höhere Eskalationsstufe, Nachphase.
+
+Entwerfe ein Szenario unter Inbezugnahme der verfügbaren Informationen.
+Liste die Phasen in ihrer Reihenfolge auf und beschreibe die Merkmale von jeder Phase.
+
+Konzentriere dich ausschließlich auf den Tatsachenverlauf. Formuliere keine Ziele, und auch keine Handlungsempfehlungen.
+Beschreibe auch keine Reaktionen oder getroffenen Maßnahmen. Verzichte auch auf die Nennung von mittelbaren oder Langzeitfolgen, die erst nach der Nachphase eintreten.
+Das Szenario soll so verlaufen, wie wenn niemand eingreift.
+Es geht hier darum, den Rahmen der Grundbedingungen zu legen.
+
+Arbeite ausschließlich mit den Informationen, die im Text zu finden sind!
+
+Hier ist der Text: {text}
