@@ -1,5 +1,10 @@
 import streamlit as st
+<<<<<<< HEAD
 # from scenariogenerator.backend.user_actions import get_gefahr_options, get_prompt, generate_szenario
+=======
+from scenariogenerator.backend.user_actions import get_gefahr_options, get_prompt, generate_szenario
+# Change for change's sake
+>>>>>>> 72034df9fb420967ab1b609370eb6dfd00774e54
 
 # Set up page layout
 st.set_page_config(
