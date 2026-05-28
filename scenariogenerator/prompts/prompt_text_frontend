@@ -1,5 +1,1 @@
-Unsere Aufgabe ist die Konzipierung eines Szenarios für eine Übung für den Ernstfall.
-Das Szenario soll ein {gefahr}-Ereignis beschreiben.
-Das Ereignis findet in {location} statt.
-
-Desweiteren soll beim Szenario folgendes beachtet werden:
+Wir benötigen ein Szenario mit vier Verlaufsphasen: Vorphase, Hauptphase tiefere Eskalationsstufe, Hauptphase höhere Eskalationsstufe, Nachphase.
