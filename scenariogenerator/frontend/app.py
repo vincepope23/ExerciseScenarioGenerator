@@ -87,15 +87,16 @@ with left_col:
     
     # 4. CREATE Button (Syntax fix applied here)
     if st.button("CREATE"):
-        st.session_state.generated_scenario = f"""
-### 🚨 Szenario: Krisenfall in {selected_locato}
-
-**Ausgangslage:** {editable_prompt}
-
-**Ereignis:** In der Region **{selected_locato}** hat sich eine kritische Situation durch das Ereignis **{selected_gefahr}** entwickelt.
-
-**Auswirkungen:** Wichtige Verkehrsachsen sind blockiert. Die lokalen Einsatzkräfte (Blaulichtorganisationen) koordinieren sich eng mit dem zuständigen Führungsstab. Die Lage erfordert die sofortige Priorisierung von Schutzmassnahmen und eine rasche Ressourceneinteilung vor Ort.
-"""
+        st.session_state.generated_scenario = generate_szenario(editable_prompt, 'mistral')
+#         st.session_state.generated_scenario = f"""
+# ### 🚨 Szenario: Krisenfall in {selected_locato}
+#
+# **Ausgangslage:** {editable_prompt}
+#
+# **Ereignis:** In der Region **{selected_locato}** hat sich eine kritische Situation durch das Ereignis **{selected_gefahr}** entwickelt.
+#
+# **Auswirkungen:** Wichtige Verkehrsachsen sind blockiert. Die lokalen Einsatzkräfte (Blaulichtorganisationen) koordinieren sich eng mit dem zuständigen Führungsstab. Die Lage erfordert die sofortige Priorisierung von Schutzmassnahmen und eine rasche Ressourceneinteilung vor Ort.
+# """
 
 # --- RIGHT COLUMN: THE SIDEBAR PANEL ---
 with right_col:
