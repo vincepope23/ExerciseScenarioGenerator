@@ -1,0 +1,8 @@
+pandas
+jupyter
+ipykernel
+ollama
+pdfplumber
+pyyaml
+mistralai
+python-dotenv
