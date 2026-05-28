@@ -1,0 +1,48 @@
+Du bist ein Experte für Notfallplanung und Risikobeurteilung.
+
+Stütze dich ausschliesslich auf die bereitgestellten Dokumente. Ergänze keine Informationen aus eigenem Wissen.
+
+---
+
+Erstelle ein Übungsszenario zur folgenden Gefahr: {gefahr}
+
+Verwende dabei diese Dokumentquellen:
+---
+- Phasen: 
+{gefahr_phasen}
+
+---
+- Schwerestufen: 
+{gefahr_Schwerestufen} → Stufe 2 «gross»
+
+---
+- Auswirkungen: 
+{gefahr_Auswirkungen}
+
+---
+- Einflussfaktoren: 
+{gefahr_Einflussfaktoren}
+
+---
+Beachte ausserdem folgende Userinput: {userinput_text}
+
+---
+
+Das Szenario beschreibt ausschliesslich den Tatsachenverlauf – so, als würde niemand eingreifen.
+
+Enthalten sein muss:
+- Alle Phasen in zeitlicher Reihenfolge gemäss {gefahr_phasen}
+- Die charakteristischen Merkmale jeder Phase
+
+Nicht enthalten sein darf:
+- Ziele oder Handlungsempfehlungen
+- Reaktionen, Massnahmen oder Eingriffe
+- Mittelbare oder langfristige Folgen nach der Nachphase
+
+---
+
+Ausgabeformat (Markdown):
+
+## Szenario: [Titel]
+**Gefahr:** [Gefahrentyp]
+**Schwerestufe:** 2 – gross
