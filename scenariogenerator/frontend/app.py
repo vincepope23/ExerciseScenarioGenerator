@@ -1,5 +1,7 @@
 import streamlit as st
-from scenariogenerator.backend.user_actions import get_gefahr_options, get_prompt, generate_szenario
+from scenariogenerator.backend.user_actions import get_gefahr_options, generate_szenario, \
+    get_user_input_prompt
+
 # Change for change's sake
 
 # Set up page layout to wide to comfortably fit the side-by-side design
@@ -48,11 +50,7 @@ if "generated_scenario" not in st.session_state:
 
 # Initialize session state for the editable prompt
 if "ausgangslage_text" not in st.session_state:
-    st.session_state.ausgangslage_text = (
-        "In den Schweizer Regionen ereignet sich ein unvorhergesehener Zwischenfall...\n"
-        "Eine koordinierte Rettungsaktion wird notwendig, bei der die lokalen Behörden "
-        "schnell reagieren müssen."
-    )
+    st.session_state.ausgangslage_text = get_user_input_prompt()
 
 # Split screen 50/50 between the left main workspace and the right output sidebar
 left_col, right_col = st.columns([1, 1], gap="large")
@@ -69,16 +67,6 @@ with left_col:
     # 2. Location Dropdown
     locato_options = ["Muri", "Zollikofen", "Bern", "Gstaad", "Basel", "Grindelwald"]
     selected_locato = st.selectbox("Ort (Location)", locato_options)
-    
-    # NEW FEATURE: Refresh Button for the Prompt
-    if st.button("Aktuellisieren"):
-        # st.session_state.ausgangslage_text = (
-        #     f"Aufgrund des Ereignisses '{selected_gefahr}' in der Region {selected_locato} "
-        #    f"ist die Lage unübersichtlich. Erste zivile Notrufe gehen ein, und die "
-        #    f"wichtigsten Zufahrtsstrassen sind aktuell nicht passierbar. Die Blaulichtorganisationen "
-        #     f"benötigen umgehend Anweisungen zur Priorisierung."
-        # )
-        st.session_state.ausgangslage_text = get_prompt(selected_gefahr)
 
     # 3. Prompt text editable (Ausgangslage) - Now tied to session_state key
     editable_prompt = st.text_area("Ausgangslage (bearbeitbar)", key="ausgangslage_text", height=140)
@@ -87,16 +75,9 @@ with left_col:
     
     # 4. CREATE Button (Syntax fix applied here)
     if st.button("CREATE"):
-        st.session_state.generated_scenario = generate_szenario(editable_prompt, 'mistral')
-#         st.session_state.generated_scenario = f"""
-# ### 🚨 Szenario: Krisenfall in {selected_locato}
-#
-# **Ausgangslage:** {editable_prompt}
-#
-# **Ereignis:** In der Region **{selected_locato}** hat sich eine kritische Situation durch das Ereignis **{selected_gefahr}** entwickelt.
-#
-# **Auswirkungen:** Wichtige Verkehrsachsen sind blockiert. Die lokalen Einsatzkräfte (Blaulichtorganisationen) koordinieren sich eng mit dem zuständigen Führungsstab. Die Lage erfordert die sofortige Priorisierung von Schutzmassnahmen und eine rasche Ressourceneinteilung vor Ort.
-# """
+        st.session_state.generated_scenario = generate_szenario(
+            selected_gefahr, editable_prompt, "mistral"
+        )
 
 # --- RIGHT COLUMN: THE SIDEBAR PANEL ---
 with right_col:

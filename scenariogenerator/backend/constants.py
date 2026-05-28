@@ -14,7 +14,8 @@ INDEX_FILE = DATA_DIR / "Gefährdungsszenarien_index.md"
 RELEVANT_SECTIONS = [
     'Phasen',
     'Schwerestufen',
-    'Einflussfaktoren'
+    'Einflussfaktoren',
+    'Auswirkungen'
 ]
 
 GEFAHR_OPTIONS = [

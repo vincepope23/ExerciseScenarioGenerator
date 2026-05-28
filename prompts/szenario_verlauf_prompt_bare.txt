@@ -13,15 +13,15 @@ Verwende dabei diese Dokumentquellen:
 
 ---
 - Schwerestufen: 
-{gefahr_Schwerestufen} → Stufe 2 «gross»
+{gefahr_schwerestufen} → Stufe 2 «gross»
 
 ---
 - Auswirkungen: 
-{gefahr_Auswirkungen}
+{gefahr_auswirkungen}
 
 ---
 - Einflussfaktoren: 
-{gefahr_Einflussfaktoren}
+{gefahr_einflussfaktoren}
 
 ---
 Beachte ausserdem folgende Userinput: {userinput_text}
