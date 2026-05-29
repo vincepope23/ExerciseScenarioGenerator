@@ -29,10 +29,9 @@ Beachte ausserdem folgende Userinput:
 
 ---
 
-Beachte bei der Kreierung des Szenarios auf die Wahl der {location}:
-
-Dies sind die Eigenschaften zu der gewählten {location}:
-{location_eigenschaften}
+Beachte folgende Eigenschaften der gewählten {hauptschauplatz}:
+{räumliche_ausdehnung}
+{betroffene_infrastruktuen}
 
 ---
 
