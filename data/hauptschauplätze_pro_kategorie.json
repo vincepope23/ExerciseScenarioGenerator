@@ -1,0 +1,92 @@
+{
+  "titel": "Hauptschauplätze pro Gefährdungskategorie",
+  "quelle": "BABS – Bundesamt für Bevölkerungsschutz, Katastrophen und Notlagen Schweiz 2025",
+  "intensitaetsstufe": "gross (Stufe 2)",
+  "kategorien": [
+    {
+      "id": "naturgefahren",
+      "name": "Naturgefahren",
+      "hauptschauplätze": [
+        "Grössere Stadt / Agglomeration",
+        "Mittelland",
+        "Gesamte Schweiz",
+        "Waldgebiet mit angrenzenden Dörfern",
+        "Alpennordflanke / Voralpen / Zentralschweiz",
+        "CH-Alpen",
+        "Alpines Bergdorf im Talbereich",
+        "Europäischer Luftraum",
+        "Gewässer / Seen / Flüsse",
+        "Einschlagsort Mitteleuropa"
+      ]
+    },
+    {
+      "id": "technische_unfaelle",
+      "name": "Technische Unfälle",
+      "hauptschauplätze": [
+        "Wohnquartier in Flughafennähe",
+        "Eisenbahnlinie in besiedeltem Gebiet",
+        "Autobahnausfahrt",
+        "Chemischer Betrieb in städtischer Umgebung",
+        "Alpines Tal mit Stauanlage",
+        "Rhein / Rheinhäfen Basel"
+      ]
+    },
+    {
+      "id": "versorgungsausfaelle",
+      "name": "Versorgungsausfälle",
+      "hauptschauplätze": [
+        "Städtische Region im Mittelland",
+        "Gesamte Schweiz",
+        "Rheinhäfen Basel",
+        "Mehrere Kantone mit Grossagglomerationen",
+        "Digitaler Raum / national"
+      ]
+    },
+    {
+      "id": "a_szenarien",
+      "name": "A-Szenarien",
+      "hauptschauplätze": [
+        "Schweizer Kernkraftwerk (Standort unspezifiziert)",
+        "Strasse / Transportroute (nachts)"
+      ]
+    },
+    {
+      "id": "b_szenarien",
+      "name": "B-Szenarien",
+      "hauptschauplätze": [
+        "Biologisches Labor (Sicherheitsstufe 3)",
+        "Landwirtschaftsbetriebe (mehrere Regionen)",
+        "Spital / Altersheim (Sekundärschauplatz Infektion)",
+        "Gesamte Schweiz / global",
+        "Postsortierzentrum",
+        "Nicht spezifiziert (Viren / Toxin)"
+      ]
+    },
+    {
+      "id": "anschlaege",
+      "name": "Anschläge",
+      "hauptschauplätze": [
+        "Hauptbahnhof einer Schweizer Grossstadt",
+        "Flughafen / Abflughalle",
+        "Supermarkt",
+        "Strasse / Transportroute",
+        "Digitale Infrastruktur / national"
+      ]
+    },
+    {
+      "id": "gesellschaftliche_krisen",
+      "name": "Gesellschaftliche Krisen",
+      "hauptschauplätze": [
+        "Grenzübergänge / Bahnhöfe / Aufnahmezentren",
+        "Städtische Zentren / öffentliche Plätze"
+      ]
+    },
+    {
+      "id": "krieg",
+      "name": "Krieg",
+      "hauptschauplätze": [
+        "Mittelland / urbane Zentren / kritische Infrastrukturen (abstrakt)"
+      ]
+    }
+  ]
+}

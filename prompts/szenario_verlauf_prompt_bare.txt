@@ -29,6 +29,11 @@ Beachte ausserdem folgende Userinput:
 
 ---
 
+Beachte folgende Eigenschaften der gewählten {hauptschauplatz}:
+{räumliche_ausdehnung}
+
+---
+
 Das Szenario beschreibt ausschliesslich den Tatsachenverlauf – so, als würde niemand eingreifen.
 
 Enthalten sein muss:

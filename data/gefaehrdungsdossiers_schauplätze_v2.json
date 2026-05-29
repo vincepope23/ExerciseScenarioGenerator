@@ -1,0 +1,613 @@
+{
+  "titel": "Gefährdungsdossiers – Schauplätze und Ausdehnung",
+  "quelle": "BABS – Bundesamt für Bevölkerungsschutz, Katastrophen und Notlagen Schweiz 2025",
+  "intensitaetsstufe": "gross (Stufe 2)",
+  "gefaehrdungen": [
+    {
+      "id": "01",
+      "name": "Hagelschlag",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Grössere Stadt und Agglomeration + landwirtschaftliche Flächen",
+      "raeumliche_ausdehnung": "Gewitterfront mit Superzellen; Kernzone ~1 000 km² (H8, >6 cm Hagelkorngrösse); Gesamtfläche >9 000 km²",
+      "betroffene_infrastrukturen": [
+        "Wohngebäude (Dächer, Fenster, Fassaden)",
+        "Fahrzeuge (parkiert im Freien)",
+        "Strassen und Eisenbahnlinien",
+        "Kanalisation / Entwässerungssysteme",
+        "Keller und Tiefgaragen",
+        "Landwirtschaftliche Flächen und Gewächshäuser",
+        "Kulturgüter (Gebäude, Denkmäler, Museen)"
+      ]
+    },
+    {
+      "id": "02",
+      "name": "Starkregen mit Oberflächenabfluss",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Einige Städte und deren Agglomerationen",
+      "raeumliche_ausdehnung": "Betroffene Fläche je 50–200 km² pro Stadtzentrum; 50–100 mm Niederschlag pro Stunde",
+      "betroffene_infrastrukturen": [
+        "Keller und Souterrainwohnungen",
+        "Tiefgaragen",
+        "Strassenunterführungen",
+        "Kanalisation und Entwässerungssysteme",
+        "Strassen und Verkehrsachsen",
+        "Kleinere Bäche und Gerinne"
+      ]
+    },
+    {
+      "id": "03",
+      "name": "Starker Schneefall",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Mehrere Gebiete des Mittellandes",
+      "raeumliche_ausdehnung": "Stationäre Front; 50–70 cm Neuschnee innerhalb 3 Tagen; regional",
+      "betroffene_infrastrukturen": [
+        "Strassen und Kantonsstrassen",
+        "Eisenbahnlinien",
+        "Gebäudedächer",
+        "Strominfrastruktur"
+      ]
+    },
+    {
+      "id": "04",
+      "name": "Sturm",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Gesamte Schweiz (national)",
+      "raeumliche_ausdehnung": "Nationale Dimension; ~500 km² Waldschaden",
+      "betroffene_infrastrukturen": [
+        "Wälder und Schutzwald",
+        "Strassen und Eisenbahnlinien",
+        "Flughafen",
+        "Wohngebäude",
+        "Strommasten und Leitungen"
+      ]
+    },
+    {
+      "id": "05",
+      "name": "Kältewelle",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Grosse Teile Mittel- und Osteuropas / gesamte Schweiz",
+      "raeumliche_ausdehnung": "Überregional / europäisch; Dauer: ~4 Wochen",
+      "betroffene_infrastrukturen": [
+        "Wohngebäude (Heizung)",
+        "Strassen (Eisglätte)",
+        "Wasserversorgung (Rohrleitungen)",
+        "Landwirtschaft",
+        "Energie- und Gasversorgung"
+      ]
+    },
+    {
+      "id": "06",
+      "name": "Hitzewelle",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Gesamte Schweiz (insb. urbane Räume / Hitzeinsel-Effekt)",
+      "raeumliche_ausdehnung": "National; mehrere Wochen andauernd",
+      "betroffene_infrastrukturen": [
+        "Spitäler und Gesundheitseinrichtungen",
+        "Pflegeheime und Altersheime",
+        "Öffentlicher Raum und Grünflächen",
+        "Kühlwasseranlagen / Kraftwerke",
+        "Flüsse und Gewässer (Niedrigwasser, Blaualgen)"
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Trockenheit",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Gesamte Schweiz / europaweit",
+      "raeumliche_ausdehnung": "National bis europaweit; über Monate andauernd",
+      "betroffene_infrastrukturen": [
+        "Flüsse und Seen (Rhein: Niedrigwasser)",
+        "Landwirtschaftliche Flächen",
+        "Wasserkraftwerke und Stauseen",
+        "Trinkwasserversorgung und Grundwasser",
+        "Energieversorgung"
+      ]
+    },
+    {
+      "id": "08",
+      "name": "Waldbrand",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Waldgebiet mit angrenzenden Dörfern (Bergregion); zwei unabhängige Brandherde",
+      "raeumliche_ausdehnung": "Regional; >200 ha Wald; mehrere gefährdete Dörfer; Dauer bis Kontrolle: ~10 Tage",
+      "betroffene_infrastrukturen": [
+        "Waldgebiet (inkl. Schutzwald)",
+        "Mehrere Dörfer in Waldnähe",
+        "Kantonsstrassen und Hauptstrassen",
+        "Stromleitung / Strommasten",
+        "Trinkwasserquelle",
+        "Telekommunikationsinfrastruktur",
+        "Wohnhäuser in direkter Waldnähe"
+      ]
+    },
+    {
+      "id": "09",
+      "name": "Hochwasser",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Alpennordflanke, Voralpen, Zentralschweiz, Teile östlicher Zentralalpen, Mittelland",
+      "raeumliche_ausdehnung": "National; Einzugsgebiete von Rhein, Aare, Emme, Limmat, Reuss; Ereignisphase ~2 Wochen",
+      "betroffene_infrastrukturen": [
+        "Flussläufe und Dämme",
+        "Ortschaften im Überflutungsgebiet",
+        "Eisenbahnlinien und Brücken",
+        "Strassen",
+        "Landwirtschaftliche Flächen",
+        "Industriebetriebe",
+        "Abwasseranlagen und Kläranlagen",
+        "Trinkwasserversorgung"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Lawinenwinter",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Grösster Teil der CH-Alpen (>50%)",
+      "raeumliche_ausdehnung": "Schübe über Wochen; Neuschneesummen 200–600 cm über 21 Tage",
+      "betroffene_infrastrukturen": [
+        "Alpentäler und Ortschaften in Lawinenzonen",
+        "Kantonsstrassen und Passstrassen",
+        "Eisenbahnlinien",
+        "Schutzwald",
+        "Kaserne / Militärgebäude",
+        "Stützverbauungen und Lawinengalerien"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Bergsturz",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Alpines Bergdorf (~3 000 Einw.) im Talbereich; Murgang + Stauung Talfluss",
+      "raeumliche_ausdehnung": "Lokale Ausdehnung; Schadensraum mehrere km²; Absturzmasse: 5 Mio. m³",
+      "betroffene_infrastrukturen": [
+        "Bergdorf und Siedlung im Talbereich",
+        "Zwei höher gelegene Dörfer (von Aussenwelt abgeschnitten)",
+        "Kantonsstrasse und Zufahrtsstrassen",
+        "Eisenbahnlinie",
+        "Kirche / Kulturgüter",
+        "Landwirtschaftsbetriebe und Alphütten",
+        "Wasserversorgung und Abwasseranlage"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Erdbeben",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Städtisches Gebiet (Hauptschadensraum) + Nebenschadensraum + schweizerweite Auswirkungen",
+      "raeumliche_ausdehnung": "Hauptschadensraum nicht geografisch spezifiziert; Magnitude 6,5; Nachbeben M5,2 nach 13 h",
+      "betroffene_infrastrukturen": [
+        "Wohngebäude und Infrastrukturen allgemein",
+        "Spital / Notaufnahme",
+        "Schule / Kindergarten",
+        "Chemiewerk (Hauptschadensraum)",
+        "Abwasserreinigungsanlage (Nebenschadensraum)",
+        "Strom-, Gas- und Telekommunikationsinfrastruktur",
+        "Eisenbahnlinien, Strassen, Brücken",
+        "Notunterkünfte / provisorische Unterkünfte"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Vulkanausbruch Ausland",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Vulkan im benachbarten Ausland; Aschewolke bis 40 km Höhe",
+      "raeumliche_ausdehnung": "Europäischer Luftraum (8 Tage gesperrt); Stärke VEI 5–6",
+      "betroffene_infrastrukturen": [
+        "Flughafen Schweiz",
+        "Europäischer Luftraum",
+        "Güterversorgung (Lieferengpässe)",
+        "Tourismus"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Ausbreitung invasiver Arten",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Gewässer, Seen und Flüsse schweizweit; Agrar- und Weideland",
+      "raeumliche_ausdehnung": "National; schleichend über Jahre bis Jahrzehnte",
+      "betroffene_infrastrukturen": [
+        "Agrar- und Weideland",
+        "Seen und Flüsse (Neuenburgersee, Rhein)",
+        "Wasserkraftwerke und Kühlwasseranlagen",
+        "Trinkwasseranlagen"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Meteoriteneinschlag",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Einschlagsort in Mitteleuropa (nicht schweizspezifisch)",
+      "raeumliche_ausdehnung": "Einschlagkrater + überregionale Druckwelle / Trümmerwurf",
+      "betroffene_infrastrukturen": [
+        "Einschlagkrater und unmittelbare Umgebung",
+        "Überregionale Infrastruktur (Druckwelle)",
+        "Luftverkehr"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Sonnensturm",
+      "kategorie": "Naturgefahren",
+      "hauptschauplatz": "Global (sonnenzugewandte Seite der Erde)",
+      "raeumliche_ausdehnung": "Global; geomagnetischer Sturm weltweit",
+      "betroffene_infrastrukturen": [
+        "Strominfrastruktur (Transformatoren, Hochspannungsnetz)",
+        "Satelliten und Kommunikationssysteme",
+        "GPS / Navigationssysteme",
+        "Kurzwellen-Radiokommunikation",
+        "Bordelektronik Flugzeuge"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Absturz Luftfahrtobjekt",
+      "kategorie": "Technische Unfälle",
+      "hauptschauplatz": "Wohnquartier mit Ein- und Mehrfamilienhäusern in Flughafennähe",
+      "raeumliche_ausdehnung": "Umkreis von mehreren Hundert Metern um Absturzstelle",
+      "betroffene_infrastrukturen": [
+        "Wohnhäuser (direkt getroffen und in Trümmerwurfzone)",
+        "Kirche / Kulturgutgebäude",
+        "Kanalisation und unterirdische Einrichtungen (Kerosingefahr)",
+        "Spital (Verletztenversorgung)"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Gefahrgutunfall Schiene",
+      "kategorie": "Technische Unfälle",
+      "hauptschauplatz": "Eisenbahnlinie in besiedeltem Gebiet",
+      "raeumliche_ausdehnung": "Lokal bis regional; sensible Objekte in Nähe: Spitäler, Altersheime, Schulen, Einkaufszentren",
+      "betroffene_infrastrukturen": [
+        "Eisenbahnlinie (inkl. Bahntunnel oder Brücke als Sonderfall)",
+        "Wohnhäuser in Bahnnähe",
+        "Kanalisation und Gewässer (Sekundärwirkung)",
+        "Spital (Verletztenversorgung)"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Gefahrgutunfall Strasse",
+      "kategorie": "Technische Unfälle",
+      "hauptschauplatz": "Autobahnausfahrt, erhöhtes Verkehrsaufkommen (Berufsverkehr morgens)",
+      "raeumliche_ausdehnung": "Lokal begrenzt; Lösungsmittel (Referenzsubstanz Benzin), 20 Tonnen",
+      "betroffene_infrastrukturen": [
+        "Autobahn (beidseitig gesperrt)",
+        "Kanalisation (Explosionsgefahr durch Gasdampf)",
+        "Angrenzende Wohnzone (Luftverfrachtung)",
+        "Spital (Verletztenversorgung)"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Unfall C-Betrieb",
+      "kategorie": "Technische Unfälle",
+      "hauptschauplatz": "Chemischer Betrieb in städtischer Umgebung (morgens, leichter Wind)",
+      "raeumliche_ausdehnung": "Betriebsareal + angrenzende Autobahn + dicht besiedelte Wohnzone; ~2 km² betroffen",
+      "betroffene_infrastrukturen": [
+        "Chemischer Betrieb / Industrieareal",
+        "Autobahn und angrenzende Wohnzone",
+        "Trinkwasserfassung / Grundwasserfassung",
+        "Bodenwaschanlage",
+        "Spital (Verletztenversorgung)"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Unfall Stauanlage",
+      "kategorie": "Technische Unfälle",
+      "hauptschauplatz": "Alpines Tal mit Stauanlage; grosses Dorf (~3 000 Einw.) im Überflutungsbereich",
+      "raeumliche_ausdehnung": "Lokale Ausdehnung; mehrere km² Schadensraum; Überschwappen durch Felssturz in Stausee",
+      "betroffene_infrastrukturen": [
+        "Stauanlage / Talsperre",
+        "Grosses Dorf und zwei höher gelegene Dörfer (abgeschnitten)",
+        "Strassen und Eisenbahnlinie",
+        "Brücken",
+        "Schule / Kindergarten",
+        "Gemeindeverwaltung",
+        "Spital (Wiederherstellung Priorität)",
+        "Landwirtschaftsbetriebe und Industriebetriebe",
+        "Wasserversorgung und Abwasseranlage"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Einschränkung Schiffsverkehr",
+      "kategorie": "Technische Unfälle",
+      "hauptschauplatz": "Rhein zwischen Schleuse Birsfelden und Dreirosenbrücke (Basel)",
+      "raeumliche_ausdehnung": "Sperrung des Rheins für 2 Wochen; 300 blockierte Güterschiffe; Schweizerische Rheinhäfen blockiert",
+      "betroffene_infrastrukturen": [
+        "Schleuse Birsfelden",
+        "Dreirosenbrücke Basel",
+        "Auhafen Muttenz / Schweizerische Rheinhäfen",
+        "Pflichtlager (Mineralöl, Futtermittel, Dünger)",
+        "Industriebetriebe (Lieferengpässe)"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Ausfall Erdgasversorgung",
+      "kategorie": "Versorgungsausfälle",
+      "hauptschauplatz": "Städtische Region im Mittelland mit mehreren Gemeinden (~100 000 Einw.)",
+      "raeumliche_ausdehnung": "Gas-Hochdruckleitung durch Hangrutsch beschädigt; 3 Wochen Ausfall",
+      "betroffene_infrastrukturen": [
+        "Gas-Hochdruckleitung (Schadensstelle)",
+        "Wohngebäude (Wärmeversorgung)",
+        "Industriebetriebe und Gewerbebetriebe"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Mangellage Erdgasversorgung",
+      "kategorie": "Versorgungsausfälle",
+      "hauptschauplatz": "Gesamte Schweiz + europäisches Umfeld",
+      "raeumliche_ausdehnung": "National; geopolitisch bedingt; Dauer: Wochen bis Monate",
+      "betroffene_infrastrukturen": [
+        "Gasnetz (national)",
+        "Industrielle Grossverbraucher",
+        "Wohngebäude (Heizung)",
+        "Fernwärmenetz"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Mangellage Erdölversorgung",
+      "kategorie": "Versorgungsausfälle",
+      "hauptschauplatz": "Gesamte Schweiz; Importengpass via Rheinhäfen Basel",
+      "raeumliche_ausdehnung": "National; bedingt durch Transportengpässe oder geopolitische Krisen",
+      "betroffene_infrastrukturen": [
+        "Rheinhäfen Basel (Importweg)",
+        "Produktepipeline SAPPRO (Südfrankreich – Genf)",
+        "Pflichtlager (Mineralölprodukte)",
+        "Tankstellen / Treibstoffversorgung",
+        "Raffinerie"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Stromausfall",
+      "kategorie": "Versorgungsausfälle",
+      "hauptschauplatz": "Mehrere Kantone mit Grossagglomerationen und grosser Infrastrukturdichte",
+      "raeumliche_ausdehnung": "Hochspannungsnetz; 2–4 Tage Totalausfall; sukzessive Regeneration über Wochen",
+      "betroffene_infrastrukturen": [
+        "Hochspannungsnetz / Unterwerke",
+        "Bahnhöfe und Stellwerke / Leitsysteme",
+        "Strassentunnel (Sperrung)",
+        "Flughafen (Betriebseinstellung)",
+        "Museum / Archiv / Bibliothek (Klimatechnikausfall)",
+        "Notfalltreffpunkte"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "Strommangellage",
+      "kategorie": "Versorgungsausfälle",
+      "hauptschauplatz": "Gesamte Schweiz + europäisches Umfeld",
+      "raeumliche_ausdehnung": "National; Bewirtschaftungsmassnahmen über 16 Wochen",
+      "betroffene_infrastrukturen": [
+        "Strominfrastruktur national",
+        "Öffentlicher Verkehr (ÖV-Angebot –30%)",
+        "Mobilfunknetz (DNS-Sperren)",
+        "Industrielle Grossverbraucher",
+        "Lebensmittelgeschäfte (Hamsterkäufe)"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Ausfall Mobilfunk",
+      "kategorie": "Versorgungsausfälle",
+      "hauptschauplatz": "Gesamte Schweiz (digitaler Raum / national)",
+      "raeumliche_ausdehnung": "National; Mobilfunknetz flächendeckend betroffen",
+      "betroffene_infrastrukturen": [
+        "Mobilfunkantennen und -infrastruktur",
+        "Rechenzentren",
+        "Notfallkommunikation"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "KKW-Unfall",
+      "kategorie": "A-Szenarien",
+      "hauptschauplatz": "Schweizer Kernkraftwerk (Standort unspezifiziert); partielle Kernschmelze",
+      "raeumliche_ausdehnung": "Zone 1 (Evakuierung): ~20 km Radius; Kontaminationsgebiet: ~2 600 km²; Strahlungsbelastung bis ~50 km",
+      "betroffene_infrastrukturen": [
+        "Kernkraftwerk und Standortumgebung",
+        "Landwirtschaftliche Flächen (Ernte-/Weideverbot)",
+        "Trinkwasserversorgung (~150 000 Personen, 7 Tage)",
+        "Abwasseranlage / Kläranlage",
+        "Industriebetriebe und Produktionsstandorte",
+        "Spital (Dekontamination / Versorgung)",
+        "Notunterkünfte (Evakuierte)"
+      ]
+    },
+    {
+      "id": "40",
+      "name": "Anschlag auf Nukleartransport",
+      "kategorie": "A-Szenarien",
+      "hauptschauplatz": "Strasse / Transportroute (nachts; Richtung Zentrales Zwischenlager Würenlingen)",
+      "raeumliche_ausdehnung": "Umkreis 500 m gesperrt; Ortschaft ~1 km evakuiert; Kontaminationsgebiet ~5–20 km²",
+      "betroffene_infrastrukturen": [
+        "Strasse und Transportroute",
+        "Ortschaft / Wohngebiet (~2 500 Einw.) in ~1 km Distanz",
+        "Trinkwasserversorgung (Sperrung Sekundärwirkung)",
+        "Abwasseranlage / Kläranlage (Sekundärwirkung)",
+        "Strassen- und Schienenverkehr (lokal eingestellt)"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Unfall B-Betrieb",
+      "kategorie": "B-Szenarien",
+      "hauptschauplatz": "Biologisches Labor (Sicherheitsstufe 3); städtisch oder ländlich",
+      "raeumliche_ausdehnung": "Kontamination: nur Laborgebäude; Infektionen: überall wo sich kontaminierte Personen aufgehalten haben",
+      "betroffene_infrastrukturen": [
+        "Laborgebäude (Sicherheitsstufe 3)",
+        "Altersheim (Sekundärschauplatz Infektion)",
+        "Spital / Quarantänezimmer (Behandlung)",
+        "Wohnumfeld der betroffenen Personen"
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Tierseuche",
+      "kategorie": "B-Szenarien",
+      "hauptschauplatz": "Landwirtschaftsbetriebe in mehreren Regionen der Schweiz",
+      "raeumliche_ausdehnung": "Regional bis national; bekannter Erreger mit hoher Übertragungsrate; ~100 infizierte Bestände",
+      "betroffene_infrastrukturen": [
+        "Landwirtschaftsbetriebe und Ställe",
+        "Schlachthöfe und lebensmittelverarbeitende Betriebe",
+        "Sperrzonen und Kontrollpunkte",
+        "Wanderwege in Seuchenzonen (gesperrt)"
+      ]
+    },
+    {
+      "id": "31",
+      "name": "Pandemie",
+      "kategorie": "B-Szenarien",
+      "hauptschauplatz": "Gesamte Schweiz / global (Ursprung im Ausland)",
+      "raeumliche_ausdehnung": "Global; Dauer: Monate bis Jahre",
+      "betroffene_infrastrukturen": [
+        "Spitäler und Gesundheitseinrichtungen",
+        "Pflegeheime und Altersheime",
+        "Öffentlicher Verkehr und Bahnhöfe",
+        "Schulen",
+        "Arbeitsstätten",
+        "Lebensmittelversorgung"
+      ]
+    },
+    {
+      "id": "35",
+      "name": "Anschlag mit Viren",
+      "kategorie": "B-Szenarien",
+      "hauptschauplatz": "Nicht spezifiziert im Szenario",
+      "raeumliche_ausdehnung": "Nicht spezifiziert im Szenario",
+      "betroffene_infrastrukturen": []
+    },
+    {
+      "id": "37",
+      "name": "Anschlag mit Toxin",
+      "kategorie": "B-Szenarien",
+      "hauptschauplatz": "Nicht spezifiziert im Szenario",
+      "raeumliche_ausdehnung": "Nicht spezifiziert im Szenario",
+      "betroffene_infrastrukturen": []
+    },
+    {
+      "id": "36",
+      "name": "Anschlag mit Bakterien",
+      "kategorie": "B-Szenarien",
+      "hauptschauplatz": "Postsortierzentrum (Anthrax per Post)",
+      "raeumliche_ausdehnung": "Sortierzentrum + Auslieferungsstellen; Auswirkungen Postverkehr grosse Teile Schweiz (~400 000 Personen, 2 Tage)",
+      "betroffene_infrastrukturen": [
+        "Postsortierzentrum",
+        "Postauslieferstellen und Briefkästen",
+        "Arztpraxen und Spitäler (Behandlung)"
+      ]
+    },
+    {
+      "id": "33",
+      "name": "Anschlag mit konventionellen Mitteln",
+      "kategorie": "Anschläge",
+      "hauptschauplatz": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit, Werktag morgens)",
+      "raeumliche_ausdehnung": "Bahnhofsareal + unmittelbare Umgebung; Sperrzone und Rettungsachsen in der Innenstadt",
+      "betroffene_infrastrukturen": [
+        "Bahnhof / Hauptbahnhof",
+        "Personenzüge",
+        "Bahninfrastruktur (Gleise, Perrons)",
+        "Spital / Notaufnahme",
+        "Lebensmittelgeschäfte / Einkaufszentren / Einkaufsstrassen",
+        "Kirche / Kulturgutgebäude"
+      ]
+    },
+    {
+      "id": "34",
+      "name": "Anschlag mit Dirty Bomb",
+      "kategorie": "Anschläge",
+      "hauptschauplatz": "Vorplatz des Hauptbahnhofs einer Schweizer Stadt (Freitagnachmittag, Stosszeit)",
+      "raeumliche_ausdehnung": "Innere Absperrung 100 m; äussere Absperrung 100–500 m in Abwindrichtung; Dekontaminationszone bis 6 km",
+      "betroffene_infrastrukturen": [
+        "Bahnhof / Bahnhofsvorplatz",
+        "Bahninfrastruktur (teils wochenlang gesperrt)",
+        "Wohngebäude und Strassen in Abwindrichtung (500 m bis 6 km)",
+        "Spital (Dekontamination / Notfallversorgung)",
+        "Kläranlagen (Sekundärwirkung über Abwässer)"
+      ]
+    },
+    {
+      "id": "38",
+      "name": "Anschlag mit C-Kampfstoff",
+      "kategorie": "Anschläge",
+      "hauptschauplatz": "Abflughalle eines grossen Flughafens (~200 Personen; 1 Liter Sarin)",
+      "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + schrittweise gesamter Flughafen evakuiert; Flugbetrieb eingestellt",
+      "betroffene_infrastrukturen": [
+        "Flughafen / Abflughalle",
+        "Angrenzende Gebäudeteile (Lüftung, Verschleppung)",
+        "Spital (Dekontamination / Versorgung)",
+        "Bahnhof (Intensitätsstufe 1) / Stadion (Intensitätsstufe 3)"
+      ]
+    },
+    {
+      "id": "39",
+      "name": "Anschlag mit toxischer Industriechemikalie",
+      "kategorie": "Anschläge",
+      "hauptschauplatz": "Supermarkt (~1 500 m² Verkaufsfläche; Samstagvormittag ~11 Uhr; ~100 Personen)",
+      "raeumliche_ausdehnung": "Gebäudekomplex des Supermarkts; Abluftzone im Abwindgebiet (keine Gesundheitsgefahr aussen nach ~1 h)",
+      "betroffene_infrastrukturen": [
+        "Supermarkt / Einkaufszentrum",
+        "Luftansaugschacht / Lüftungsanlage (Einbringungspunkt)",
+        "Spital (Verletztenversorgung)",
+        "Tiefbahnhof (Intensitätsstufe 3) / Mehrfamilienhaus (Intensitätsstufe 1)"
+      ]
+    },
+    {
+      "id": "41",
+      "name": "Cyberangriff",
+      "kategorie": "Anschläge",
+      "hauptschauplatz": "Digitale Infrastruktur / national; kritische Sektoren: Finanzen, Behörden, Energie, Telekommunikation, Verkehr",
+      "raeumliche_ausdehnung": "National (keine räumliche Begrenzung); Wirkung im digitalen Raum",
+      "betroffene_infrastrukturen": [
+        "Rechenzentren und IT-Systeme",
+        "Finanzinfrastruktur (Banken, E-Banking)",
+        "Energieversorgungssysteme",
+        "Telekommunikationsinfrastruktur",
+        "Verkehrssteuerungssysteme",
+        "Behörden-Webseiten und Informationskanäle"
+      ]
+    },
+    {
+      "id": "42",
+      "name": "Andrang Schutzsuchender",
+      "kategorie": "Gesellschaftliche Krisen",
+      "hauptschauplatz": "Grenzübergänge / Bahnhöfe / Aufnahmezentren; gesamte Schweiz",
+      "raeumliche_ausdehnung": "National; anhaltend über Monate",
+      "betroffene_infrastrukturen": [
+        "Grenzübergänge",
+        "Bahnhöfe und Bahnstrecken",
+        "Aufnahmezentren des Bundes",
+        "Kantonale Unterkünfte (Turnhallen, Gemeindesäle, Schutzanlagen)",
+        "Lebensmittelgeschäfte"
+      ]
+    },
+    {
+      "id": "43",
+      "name": "Unruhen",
+      "kategorie": "Gesellschaftliche Krisen",
+      "hauptschauplatz": "Städtische Zentren / öffentliche Plätze",
+      "raeumliche_ausdehnung": "Lokal bis regional; eskalierend",
+      "betroffene_infrastrukturen": [
+        "Öffentliche Plätze und Stadtzentren",
+        "Behördengebäude",
+        "Detailhandel und Geschäfte"
+      ]
+    },
+    {
+      "id": "44",
+      "name": "Bewaffneter Konflikt",
+      "kategorie": "Krieg",
+      "hauptschauplatz": "Mittelland / urbane Zentren / kritische Infrastrukturen (abstrakt)",
+      "raeumliche_ausdehnung": "Regional bis national; eskalierend über Wochen bis Monate",
+      "betroffene_infrastrukturen": [
+        "Kritische Infrastrukturen (Energie, Telekommunikation, Verkehr)",
+        "Industriebetriebe und Rechenzentren",
+        "Urbane Zentren und Wohngebiete",
+        "Verkehrsachsen"
+      ]
+    }
+  ]
+}
