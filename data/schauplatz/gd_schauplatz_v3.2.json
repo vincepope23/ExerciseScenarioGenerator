@@ -581,13 +581,25 @@
       "id": "34",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
-        {
+         {
           "label": "Vorplatz Hauptbahnhof einer Schweizer Stadt (Freitagnachmittag, Stosszeit)",
           "raeumliche_ausdehnung": "Innere Absperrung 100 m; äussere 100–500 m in Abwindrichtung; Dekontaminationszone bis 6 km; Bahnbetrieb Wochen gesperrt"
         },
         {
           "label": "Öffentlicher Platz / Grossveranstaltung",
           "raeumliche_ausdehnung": "Lokal; hohes Personenaufkommen; weiträumige Kontaminationszone; Dekontamination Strassen und Gebäude"
+        },
+         {
+          "label": "Flughafen / Abflughalle (~200 Personen;)",
+          "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + gesamter Flughafen evakuiert; Flugbetrieb eingestellt; Spital Dekontamination"
+        },
+       {
+          "label": "Supermarkt / Einkaufszentrum (Samstagvormittag, ~100 Personen)",
+          "raeumliche_ausdehnung": "Gebäudekomplex; Abluftzone im Abwindgebiet; keine Gesundheitsgefahr aussen nach ~1 h"
+        },
+        {
+          "label": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit, Werktag morgens)",
+          "raeumliche_ausdehnung": "Bahnhofsareal + unmittelbare Umgebung; Sperrzone und Rettungsachsen in der Innenstadt"
         }
       ]
     },
@@ -595,17 +607,21 @@
       "id": "38",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
-        {
-          "label": "Flughafen / Abflughalle (~200 Personen; 1 Liter Sarin)",
+         {
+          "label": "Flughafen / Abflughalle (~200 Personen;)",
           "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + gesamter Flughafen evakuiert; Flugbetrieb eingestellt; Spital Dekontamination"
         },
-        {
-          "label": "Bahnhof (Intensitätsstufe 1 – erheblich)",
-          "raeumliche_ausdehnung": "Lokal; Bahnhofsgebäude + Perrons; Evakuierung; Streckenunterbruch; Dekontaminationszone"
+       {
+          "label": "Supermarkt / Einkaufszentrum (Samstagvormittag, ~100 Personen)",
+          "raeumliche_ausdehnung": "Gebäudekomplex; Abluftzone im Abwindgebiet; keine Gesundheitsgefahr aussen nach ~1 h"
         },
         {
-          "label": "Stadion / Grossveranstaltungsort (Intensitätsstufe 3 – extrem)",
-          "raeumliche_ausdehnung": "Lokal; hohes Personenaufkommen (Tausende); Massenanfall Verletzter; weiträumige Sperrzone"
+          "label": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit, Werktag morgens)",
+          "raeumliche_ausdehnung": "Bahnhofsareal + unmittelbare Umgebung; Sperrzone und Rettungsachsen in der Innenstadt"
+        },
+        {
+          "label": "Öffentlicher Platz / Grossveranstaltung",
+          "raeumliche_ausdehnung": "Lokal; hohes Personenaufkommen; weiträumige Kontaminationszone; Dekontamination Strassen und Gebäude"
         }
       ]
     },
