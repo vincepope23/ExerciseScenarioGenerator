@@ -19,6 +19,7 @@ RELEVANT_SECTIONS = [
 ]
 
 GEFAHR_OPTIONS = [
+
     "Andrang Schutzsuchender",
     "Bergsturz",
     "Bewaffneter Konflikt",
@@ -63,4 +64,11 @@ GEFAHR_OPTIONS = [
     "Trockenheit",
     "Vulkanausbruch",
     "Waldbrand"
+    "Tierseuche",
+    "Toxinanschlag",
+    "Trockenheit",
+    "Unfall B-Betrieb",
+    "Vulkanausbruch",
+    "Waldbrand",
+    "Cyberangriff",
 ]
