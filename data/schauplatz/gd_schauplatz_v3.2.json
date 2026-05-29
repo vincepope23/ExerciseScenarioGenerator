@@ -395,7 +395,7 @@
         }
       ]
     },
-    "Erdölmangellage": {
+    "Mangellage Erdoelversorgung": {
       "id": "26",
       "kategorie": "Versorgungsausfälle",
       "hauptschauplätze": [
@@ -525,7 +525,7 @@
         }
       ]
     },
-    "Anschlag mit Viren": {
+    "Anschlag Viren": {
       "id": "35",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -535,7 +535,7 @@
         }
       ]
     },
-    "Anschlag mit Toxin": {
+    "Anschlag Toxin": {
       "id": "37",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -545,7 +545,7 @@
         }
       ]
     },
-    "Anschlag mit Bakterien": {
+    "Anschlag Bakterien": {
       "id": "36",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -577,7 +577,7 @@
         }
       ]
     },
-    "Anschlag mit Dirty Bomb": {
+    "Anschlag Dirty Bomb": {
       "id": "34",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
@@ -591,7 +591,7 @@
         }
       ]
     },
-    "Chemischer Anschlag": {
+    "Anschlag C-Kampfstoff": {
       "id": "38",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
@@ -609,7 +609,7 @@
         }
       ]
     },
-    "Anschlag mit toxischer Industriechemikalie": {
+    "Anschlag toxische Industriechemikalie": {
       "id": "39",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
