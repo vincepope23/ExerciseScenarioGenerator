@@ -211,7 +211,7 @@
         }
       ]
     },
-    "Vulkanausbruch Ausland": {
+    "Vulkanausbruch": {
       "id": "13",
       "kategorie": "Naturgefahren",
       "hauptschauplätze": [
@@ -307,7 +307,7 @@
         }
       ]
     },
-    "Gefahrgutunfall Strasse": {
+    "Gefahrgutunfall": {
       "id": "19",
       "kategorie": "Technische Unfälle",
       "hauptschauplätze": [
@@ -325,7 +325,7 @@
         }
       ]
     },
-    "Unfall C-Betrieb": {
+    "Chemieunfall": {
       "id": "21",
       "kategorie": "Technische Unfälle",
       "hauptschauplätze": [
@@ -343,7 +343,7 @@
         }
       ]
     },
-    "Unfall Stauanlage": {
+    "Stauanlagen_Unfall": {
       "id": "23",
       "kategorie": "Technische Unfälle",
       "hauptschauplätze": [
@@ -371,7 +371,7 @@
         }
       ]
     },
-    "Ausfall Erdgasversorgung": {
+    "Erdgasausfall": {
       "id": "24",
       "kategorie": "Versorgungsausfälle",
       "hauptschauplätze": [
@@ -385,7 +385,7 @@
         }
       ]
     },
-    "Mangellage Erdgasversorgung": {
+    "Gasmangellage": {
       "id": "25",
       "kategorie": "Versorgungsausfälle",
       "hauptschauplätze": [
@@ -395,7 +395,7 @@
         }
       ]
     },
-    "Mangellage Erdoelversorgung": {
+    "Erdölmangellage": {
       "id": "26",
       "kategorie": "Versorgungsausfälle",
       "hauptschauplätze": [
@@ -469,7 +469,7 @@
         }
       ]
     },
-    "Anschlag auf Nukleartransport": {
+    "Nuklearterroranschlag": {
       "id": "40",
       "kategorie": "A-Szenarien",
       "hauptschauplätze": [
@@ -525,7 +525,7 @@
         }
       ]
     },
-    "Anschlag Viren": {
+    "Bioterrorismus": {
       "id": "35",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -535,7 +535,7 @@
         }
       ]
     },
-    "Anschlag Toxin": {
+    "Toxinanschlag": {
       "id": "37",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -545,7 +545,7 @@
         }
       ]
     },
-    "Anschlag Bakterien": {
+    "Biologischer Anschlag": {
       "id": "36",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -577,7 +577,7 @@
         }
       ]
     },
-    "Anschlag Dirty Bomb": {
+    "Radiologischer Anschlag": {
       "id": "34",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
@@ -603,7 +603,7 @@
         }
       ]
     },
-    "Anschlag C-Kampfstoff": {
+    "Chemischer Anschlag": {
       "id": "38",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
@@ -683,7 +683,7 @@
         }
       ]
     },
-    "Unruhen": {
+    "Gesellschaftliche Unruhen": {
       "id": "43",
       "kategorie": "Gesellschaftliche Krisen",
       "hauptschauplätze": [
