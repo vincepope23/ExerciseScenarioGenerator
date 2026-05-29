@@ -3,8 +3,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 
-from scenariogenerator.backend.user_actions import get_gefahr_options, generate_szenario, \
-    get_user_input_prompt
+from scenariogenerator.backend.user_actions import get_gefahr_options, generate_szenario, get_user_input_prompt, get_locations
 from scenariogenerator.constants import ROOT_DIR
 
 # --- 1. SEITEN-KONFIGURATION ---
@@ -119,27 +118,42 @@ if "ausgangslage_text" not in st.session_state:
 left_col, right_col = st.columns([1, 1], gap="large")
 
 # --- LINKE SPALTE: EINGABE ---
+def update_location_options():
+    st.session_state.location_options = get_locations(st.session_state.selected_gefahr)
+
 with left_col:
     st.markdown("<h3 style='color: white;'>Konfiguration</h3>", unsafe_allow_html=True)
-    
+
     # 1. Gefahr Dropdown
     gefahr_options = get_gefahr_options()
-    selected_gefahr = st.selectbox("Gefahr (Hazard)", gefahr_options)
-    
+    selected_gefahr = st.selectbox(
+        "Gefahr (Hazard)",
+        gefahr_options,
+        key="selected_gefahr",
+        on_change=update_location_options
+    )
+
+    # Initialize location_options in session_state if not present
+    if "location_options" not in st.session_state:
+        st.session_state.location_options = get_locations(selected_gefahr)
+
     # 2. Location Dropdown
-    locato_options = ["Muri", "Zollikofen", "Bern", "Gstaad", "Basel", "Grindelwald"]
-    selected_locato = st.selectbox("Ort (Location)", locato_options)
+    selected_location = st.selectbox(
+        "Ort (Location)",
+        st.session_state.location_options,
+        key="selected_location"
+    )
 
     # 3. Prompt text editable (Ausgangslage)
     editable_prompt = st.text_area("Ausgangslage (bearbeitbar)", key="ausgangslage_text", height=140)
-    
-    st.write("") # Layout spacer
-    
-    # 4. CREATE Button 
+
+    st.write("")  # Layout spacer
+
+    # 4. CREATE Button
     if st.button("CREATE"):
         with st.spinner("Generiere Szenario..."):
             st.session_state.generated_scenario = generate_szenario(
-                selected_gefahr, editable_prompt, "mistral"
+                selected_gefahr, selected_location, editable_prompt, "mistral"
             )
 
 # --- RECHTE SPALTE: AUSGABE ---
