@@ -61,11 +61,7 @@ Ausgabeformat Szenario (Markdown):
 
 ---
 
-### Phase 1: [Phasenname]
-[Merkmale dieser Phase]
-[Ereignisse dieser Phase als Bulletpoints]
-
-### Phase 2: [Phasenname]
+### Phase #: [Phasenname]
 [Merkmale dieser Phase]
 [Ereignisse dieser Phase als Bulletpoints]
 
@@ -75,7 +71,7 @@ Bitte generiere für die Teilnehmer für jedes [Ereignisse dieser Phase als Bull
 
 Ausgabeformat Meldung (Markdown):
 
-### Event 1: [Eventname]
+### Event #: [Eventname]
 [Was ist passiert (Ereignisart, Schadensbild)]
 [Wo (Ort)]
 [Wann (Zeitstempel)]
