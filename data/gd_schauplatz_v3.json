@@ -564,8 +564,24 @@
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
         {
-          "label": "Nicht spezifiziert im Dossier-Szenario",
-          "raeumliche_ausdehnung": "Nicht spezifiziert; abhängig von Erreger und Freisetzungsort; potenziell national/global"
+          "label": "Reisemesse in der Schweiz",
+          "raeumliche_ausdehnung": "Da die Infektion von Mensch zu Mensch übertragen werden kann, aber eine lange Inkubationszeit besteht, erstrecken sich Krankheitsfälle über die ganze Schweiz. Bedingt durch deninternationalen Reiseverkehr treten weltweit vereinzelt Fälle auf"
+        },
+        {
+          "label": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit)",
+          "raeumliche_ausdehnung": "Da die Infektion von Mensch zu Mensch übertragen werden kann, aber eine lange Inkubationszeit besteht, erstrecken sich Krankheitsfälle über die ganze Schweiz. Bedingt durch deninternationalen Reiseverkehr treten weltweit vereinzelt Fälle auf"
+        },
+        {
+          "label": "Öffentliches Verkehrsmittel (Personenzug)",
+          "raeumliche_ausdehnung": "Da die Infektion von Mensch zu Mensch übertragen werden kann, aber eine lange Inkubationszeit besteht, erstrecken sich Krankheitsfälle über die ganze Schweiz. Bedingt durch deninternationalen Reiseverkehr treten weltweit vereinzelt Fälle auf"
+        },
+        {
+          "label": "Öffentlicher Platz / Grossveranstaltung",
+          "raeumliche_ausdehnung": "Da die Infektion von Mensch zu Mensch übertragen werden kann, aber eine lange Inkubationszeit besteht, erstrecken sich Krankheitsfälle über die ganze Schweiz. Bedingt durch deninternationalen Reiseverkehr treten weltweit vereinzelt Fälle auf"
+        },
+         {
+          "label": "Flughafen / Abflughalle (~200 Personen;)",
+          "raeumliche_ausdehnung": "Da die Infektion von Mensch zu Mensch übertragen werden kann, aber eine lange Inkubationszeit besteht, erstrecken sich Krankheitsfälle über die ganze Schweiz. Bedingt durch deninternationalen Reiseverkehr treten weltweit vereinzelt Fälle auf"
         }
       ]
     },
