@@ -1,0 +1,14 @@
+Code suggestion for location:
+
+# 1. Build gefahr dropdown → trivial
+gefahren = [g["gefahr"] for g in data]
+
+# 2. Get kategorie from selection → one lookup
+kategorie = next(g["kategorie"] for g in data if g["gefahr"] == selected_gefahr)
+
+# 3. Build location dropdown → one lookup
+schauplätze = next(g["hauptschauplätze"] for g in data if g["gefahr"] == selected_gefahr)
+location_labels = [s["label"] for s in schauplätze]
+
+# 4. Get ausdehnung from location selection → one lookup
+ausdehnung = next(s["raeumliche_ausdehnung"] for s in schauplätze if s["label"] == selected_label)
