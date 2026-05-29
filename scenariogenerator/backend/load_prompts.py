@@ -1,4 +1,4 @@
-from scenariogenerator.backend.constants import PROMPTS_DIR
+from scenariogenerator.constants import PROMPTS_DIR
 
 
 def load_szenario_verlauf_prompt() -> str:

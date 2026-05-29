@@ -1,6 +1,6 @@
 import re
 
-from scenariogenerator.backend.constants import DATA_DIR, INDEX_FILE, RELEVANT_SECTIONS
+from scenariogenerator.constants import DATA_DIR, INDEX_FILE, RELEVANT_SECTIONS
 
 
 def load_main_index_file():

@@ -2,6 +2,9 @@ import streamlit as st
 from scenariogenerator.backend.user_actions import get_gefahr_options, get_prompt, generate_szenario
 from dotenv import load_dotenv
 import os
+
+from scenariogenerator.constants import ROOT_DIR
+
 load_dotenv()
 api_token = os.getenv("MISTRAL_API_KEY")
 
@@ -10,7 +13,7 @@ header_left, header_right = st.columns([1, 2], vertical_alignment="center")
 
 with header_left:
     # Make sure the image file name matches exactly what you have in your folder
-    st.image("header für front-end.png", use_container_width=True)
+    st.image(ROOT_DIR / "scenariogenerator/frontend/header für front-end.png", use_container_width=True)
     
 with header_right:
     st.title("Exercise Scenario Generator")
@@ -89,7 +92,7 @@ with left_col:
     # 4. CREATE Button (Syntax fix applied here)
     if st.button("CREATE"):
 
-        st.session_state.generated_scenario = generate_szenario(editable_prompt, "mistral", api_token)
+        st.session_state.generated_scenario = generate_szenario(editable_prompt, "mistral")
 
 # --- RIGHT COLUMN: THE SIDEBAR PANEL ---
 with right_col:

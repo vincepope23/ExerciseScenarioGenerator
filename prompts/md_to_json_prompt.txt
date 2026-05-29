@@ -1,0 +1,22 @@
+    Kannst du den unten angegebenen Text zu einem JSON-Objekt machen?
+
+    Das Format muss genau so sein:
+
+    {{
+        "Gefahr": "...",
+        "Beschreibung": "...",
+        "Rollen": ["...", "..."],
+        "Hilfsmittel": ["...", "..."],
+        "Massnahmen": ["...", "..."],
+        "Rechtsgrundlagen": ["...", "..."],
+        "Phasen": ["...", "..."],
+        "Schwerestufen": ["...", "..."],
+        "Auswirkungen": ["...", "..."],
+        "Einflussfaktoren": ["...", "..."],
+        "Ereignisbeispiele": ["...", "..."]
+    }}
+
+    Gib nur das JSON-Objekt aus, ohne zusätzliche Erklärungen, und ohne Markdown-Codeblöcke (z. B. ```json).
+    Achte darauf, dass das JSON valide ist und direkt gespeichert werden kann.
+
+    Hier ist der Text: {text}
