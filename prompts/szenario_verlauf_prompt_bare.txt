@@ -4,12 +4,6 @@ Stütze dich ausschliesslich auf die bereitgestellten Dokumente. Ergänze keine 
 
 ---
 
-Es werden zwei Outputs benötigt:
-- Für den Übungsleiter: Szenario mit der allgemeinen Beschreibung der Phase
-- Für die Übungsteilnehmer: Meldungen, welche die sich verändernde Lage beschreiben.
-
----
-
 Erstelle ein Übungsszenario zur folgenden Gefahr: {gefahr}
 
 Verwende dabei diese Dokumentquellen:
@@ -53,25 +47,40 @@ Nicht enthalten sein darf:
 
 ---
 
-Ausgabeformat Szenario (Markdown):
+## Ausgabe
 
+Erstelle zwei klar getrennte Outputs:
+
+---
+
+# OUTPUT 1 – FÜR ÜBUNGSLEITUNG
 ## Szenario: [Titel]
 **Gefahr:** [Gefahrentyp]
 **Schwerestufe:** 2 – gross
 
 ---
 
-### Phase #: [Phasenname]
+### Phase [Nr.]: [Phasenname]
 [Merkmale dieser Phase]
-[Ereignisse dieser Phase als Bulletpoints]
+
+**Ereignisse:**
+- [E1] [Kurze Beschreibung Ereignis 1]
+- [E2] [Kurze Beschreibung Ereignis 2]
+- ...
+
+*(Dieses Muster für jede Phase wiederholen)*
 
 ---
 
-Bitte generiere für die Teilnehmer für jedes [Ereignisse dieser Phase als Bulletpoints] eine Meldung:
+# OUTPUT 2 – FÜR ÜBUNGSTEILNEHMER
+
+*(Für jedes Ereignis [E#] aus Output 1 eine eigene Meldung erstellen)*
+
+---
 
 Ausgabeformat Meldung (Markdown):
 
-### Event #: [Eventname]
+### Meldung [Nr.]: [Aussagekräftiger Ereignistitel]
 [Was ist passiert (Ereignisart, Schadensbild)]
 [Wo (Ort)]
 [Wann (Zeitstempel)]

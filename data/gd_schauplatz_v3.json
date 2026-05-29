@@ -359,7 +359,7 @@
         },
         {
           "label": "Chemischer Betrieb in Flussnähe",
-          "raeumliche_ausdehnung": "Lokal + Gewässer nachgelagert; Trinkwasserfassungen gefährdet; Fischsterben möglich"
+          "raeumliche_ausdehnung": "Lokal + Gewässer nachgelagert; Trinkwasserfassungen gefährdet; Ökosystemschäden & Fischsterben möglich"
         }
       ]
     },
@@ -388,8 +388,8 @@
           "raeumliche_ausdehnung": "Sperrung 2 Wochen; 300 blockierte Güterschiffe; Auhafen Muttenz; nationale Versorgungsengpässe"
         },
         {
-          "label": "Schiffahrtsroute Rhein oberhalb Basel",
-          "raeumliche_ausdehnung": "Regional; Umleitung auf Bahn und Strasse; Pflichtlager Mineralöl, Futtermittel, Dünger beansprucht"
+          "label": "Schiffahrtsroute Rhein im Ausland unterhalb Basel",
+          "raeumliche_ausdehnung": "Sperrung 2 Wochen; 300 blockierte Güterschiffe in der Schweiz oberhald der Havarie; nationale Versorgungsengpässe"
         }
       ]
     },
@@ -416,10 +416,6 @@
         {
           "label": "Gesamte Schweiz + europäisches Umfeld",
           "raeumliche_ausdehnung": "National; geopolitisch bedingt; Bewirtschaftungsmassnahmen; Dauer: Wochen bis Monate"
-        },
-        {
-          "label": "Städtische Wohn- und Industriegebiete (Grossverbraucher)",
-          "raeumliche_ausdehnung": "National; Kontingentierung Grossverbraucher; Sparappelle Haushalte; Engpass insb. Winter"
         }
       ]
     },
