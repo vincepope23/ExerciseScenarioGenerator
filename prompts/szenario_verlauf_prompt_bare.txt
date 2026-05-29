@@ -31,7 +31,6 @@ Beachte ausserdem folgende Userinput:
 
 Beachte folgende Eigenschaften der gewählten {hauptschauplatz}:
 {räumliche_ausdehnung}
-{betroffene_infrastruktuen}
 
 ---
 
