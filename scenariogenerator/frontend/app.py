@@ -7,6 +7,7 @@ from scenariogenerator.backend.user_actions import get_gefahr_options, generate_
     get_user_input_prompt
 from scenariogenerator.constants import ROOT_DIR
 
+# --- 1. SEITEN-KONFIGURATION ---
 st.set_page_config(
     page_title="Exercise Scenario Generator",
     layout="wide",
@@ -16,24 +17,69 @@ st.set_page_config(
 load_dotenv()
 api_token = os.getenv("MISTRAL_API_KEY")
 
-# --- HEADER: IMAGE AND TITLE ON THE SAME HEIGHT ---
+# --- 2. HEADER: BILD UND TITEL ---
 header_left, header_right = st.columns([1, 2], vertical_alignment="center")
 
 with header_left:
-    # Make sure the image file name matches exactly what you have in your folder
     st.image(ROOT_DIR / "scenariogenerator/frontend/header für front-end.png", use_container_width=True)
     
 with header_right:
     st.title("Exercise Scenario Generator")
 
-st.write("---") # Adds the horizontal dividing line below the header
+st.write("---") 
 
-# Custom CSS to mimic a modern app frame with a distinct right sidebar panel
+# --- 3. CUSTOM CSS ---
 st.markdown("""
     <style>
-    /* Make the button a sharp Swiss Red interactive element */
+    /* BANNER STYLING (Dunkelgrün + Weisser Text) */
+    [data-testid="stHorizontalBlock"]:first-of-type {
+        background-color: #24362B !important; 
+        border-radius: 12px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+    }
+    
+    [data-testid="stHorizontalBlock"]:first-of-type, 
+    [data-testid="stHorizontalBlock"]:first-of-type * {
+        color: white !important;
+    }
+    
+    [data-testid="stHorizontalBlock"]:first-of-type h1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /* DROPDOWN TITEL GLOBAL WEISS (Die Beschriftung über der Box) */
+    div[data-testid="stSelectbox"] label p {
+        color: white !important;
+        font-weight: 500;
+    }
+    
+    /* --- NEU: DROPDOWN BOX INHALTE SCHWARZ --- */
+    /* Macht den ausgewählten Text in den Gefahr- und Location-Dropdowns schwarz */
+    div[data-baseweb="select"] * {
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+    }
+
+    /* FIX: EINGABEFELD (TEXT AREA) ZWINGEND HELL & TEXT SCHWARZ */
+    .stTextArea textarea {
+        color: #000000 !important;
+        background-color: #ffffff !important;
+        -webkit-text-fill-color: #000000 !important; 
+    }
+
+    /* --- NEU: RECHTE BOX (Szenariotext) ZWINGEND SCHWARZ --- */
+    /* Geht sicher, dass auch Listen, Absätze und fettgedruckter Text schwarz werden */
+    .scenario-box, 
+    .scenario-box * {
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+    }
+
+    /* BUTTON STYLING (Swiss Red) */
     .stButton>button {
-        background-color: #D52B1E !important; /* Swiss Red */
+        background-color: #D52B1E !important; 
         color: white !important;
         font-weight: bold !important;
         font-size: 20px !important;
@@ -47,7 +93,8 @@ st.markdown("""
     .stButton>button:hover {
         background-color: #A31F15 !important;
     }
-    /* Right panel background box */
+    
+    /* RECHTE BOX (Basis-Design) */
     .scenario-box {
         background-color: #F8F9FA;
         padding: 24px;
@@ -59,22 +106,21 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# *** REMOVED DUPLICATE TITLE HERE ***
 
-# Initialize session state so the scenario persists across browser updates
+# --- 4. SESSION STATE INITIALISIERUNG ---
 if "generated_scenario" not in st.session_state:
     st.session_state.generated_scenario = "Wählen Sie links Ihre Parameter und klicken Sie auf **CREATE**, um ein Szenario zu generieren."
 
-# Initialize session state for the editable prompt
 if "ausgangslage_text" not in st.session_state:
     st.session_state.ausgangslage_text = get_user_input_prompt()
 
-# Split screen 50/50 between the left main workspace and the right output sidebar
+
+# --- 5. RASTER-AUFTEILUNG (50/50) ---
 left_col, right_col = st.columns([1, 1], gap="large")
 
-# --- LEFT COLUMN: WORKSPACE CONTROLS ---
+# --- LINKE SPALTE: EINGABE ---
 with left_col:
-    st.subheader("Szenario")
+    st.markdown("<h3 style='color: white;'>Konfiguration</h3>", unsafe_allow_html=True)
     
     # 1. Gefahr Dropdown
     gefahr_options = get_gefahr_options()
@@ -84,24 +130,26 @@ with left_col:
     locato_options = ["Muri", "Zollikofen", "Bern", "Gstaad", "Basel", "Grindelwald"]
     selected_locato = st.selectbox("Ort (Location)", locato_options)
 
-    # 3. Prompt text editable (Ausgangslage) - Now tied to session_state key
+    # 3. Prompt text editable (Ausgangslage)
     editable_prompt = st.text_area("Ausgangslage (bearbeitbar)", key="ausgangslage_text", height=140)
     
     st.write("") # Layout spacer
     
-    # 4. CREATE Button (Syntax fix applied here)
+    # 4. CREATE Button 
     if st.button("CREATE"):
+        with st.spinner("Generiere Szenario..."):
+            st.session_state.generated_scenario = generate_szenario(
+                selected_gefahr, editable_prompt, "mistral"
+            )
 
-        st.session_state.generated_scenario = generate_szenario(
-            selected_gefahr, editable_prompt, "mistral"
-        )
-
-# --- RIGHT COLUMN: THE SIDEBAR PANEL ---
+# --- RECHTE SPALTE: AUSGABE ---
 with right_col:
-    st.subheader("Szenario")
+    st.markdown("<h3 style='color: white;'>Szenario</h3>", unsafe_allow_html=True)
     
-    # Render the text smoothly inside the designated right layout panel 
+    # Render den Text mit absolut zwingendem INLINE-CSS für schwarze Schrift
     st.markdown(
-        f'<div class="scenario-box">{st.session_state.generated_scenario}</div>', 
+        f'<div class="scenario-box" style="background-color: #F8F9FA !important; color: black !important;">'
+        f'<div style="color: black !important;">{st.session_state.generated_scenario}</div>'
+        f'</div>', 
         unsafe_allow_html=True
     )
