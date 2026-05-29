@@ -21,7 +21,7 @@
         }
       ]
     },
-    "Starkregen mit Oberflächenabfluss": {
+    "Starkregen": {
       "id": "02",
       "kategorie": "Naturgefahren",
       "hauptschauplätze": [
@@ -395,7 +395,7 @@
         }
       ]
     },
-    "Erdölmangellage": {
+    "Mangellage Erdoelversorgung": {
       "id": "26",
       "kategorie": "Versorgungsausfälle",
       "hauptschauplätze": [
@@ -525,7 +525,7 @@
         }
       ]
     },
-    "Anschlag mit Viren": {
+    "Anschlag Viren": {
       "id": "35",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -535,7 +535,7 @@
         }
       ]
     },
-    "Anschlag mit Toxin": {
+    "Anschlag Toxin": {
       "id": "37",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -545,7 +545,7 @@
         }
       ]
     },
-    "Anschlag mit Bakterien": {
+    "Anschlag Bakterien": {
       "id": "36",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -577,13 +577,47 @@
         }
       ]
     },
-    "Anschlag mit Dirty Bomb": {
+    "Anschlag Dirty Bomb": {
       "id": "34",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
-        {
+         {
           "label": "Vorplatz Hauptbahnhof einer Schweizer Stadt (Freitagnachmittag, Stosszeit)",
           "raeumliche_ausdehnung": "Innere Absperrung 100 m; äussere 100–500 m in Abwindrichtung; Dekontaminationszone bis 6 km; Bahnbetrieb Wochen gesperrt"
+        },
+        {
+          "label": "Öffentlicher Platz / Grossveranstaltung",
+          "raeumliche_ausdehnung": "Lokal; hohes Personenaufkommen; weiträumige Kontaminationszone; Dekontamination Strassen und Gebäude"
+        },
+         {
+          "label": "Flughafen / Abflughalle (~200 Personen;)",
+          "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + gesamter Flughafen evakuiert; Flugbetrieb eingestellt; Spital Dekontamination"
+        },
+       {
+          "label": "Supermarkt / Einkaufszentrum (Samstagvormittag, ~100 Personen)",
+          "raeumliche_ausdehnung": "Gebäudekomplex; Abluftzone im Abwindgebiet; keine Gesundheitsgefahr aussen nach ~1 h"
+        },
+        {
+          "label": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit, Werktag morgens)",
+          "raeumliche_ausdehnung": "Bahnhofsareal + unmittelbare Umgebung; Sperrzone und Rettungsachsen in der Innenstadt"
+        }
+      ]
+    },
+    "Anschlag C-Kampfstoff": {
+      "id": "38",
+      "kategorie": "Anschläge",
+      "hauptschauplätze": [
+         {
+          "label": "Flughafen / Abflughalle (~200 Personen;)",
+          "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + gesamter Flughafen evakuiert; Flugbetrieb eingestellt; Spital Dekontamination"
+        },
+       {
+          "label": "Supermarkt / Einkaufszentrum (Samstagvormittag, ~100 Personen)",
+          "raeumliche_ausdehnung": "Gebäudekomplex; Abluftzone im Abwindgebiet; keine Gesundheitsgefahr aussen nach ~1 h"
+        },
+        {
+          "label": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit, Werktag morgens)",
+          "raeumliche_ausdehnung": "Bahnhofsareal + unmittelbare Umgebung; Sperrzone und Rettungsachsen in der Innenstadt"
         },
         {
           "label": "Öffentlicher Platz / Grossveranstaltung",
@@ -591,25 +625,7 @@
         }
       ]
     },
-    "Chemischer Anschlag": {
-      "id": "38",
-      "kategorie": "Anschläge",
-      "hauptschauplätze": [
-        {
-          "label": "Flughafen / Abflughalle (~200 Personen; 1 Liter Sarin)",
-          "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + gesamter Flughafen evakuiert; Flugbetrieb eingestellt; Spital Dekontamination"
-        },
-        {
-          "label": "Bahnhof (Intensitätsstufe 1 – erheblich)",
-          "raeumliche_ausdehnung": "Lokal; Bahnhofsgebäude + Perrons; Evakuierung; Streckenunterbruch; Dekontaminationszone"
-        },
-        {
-          "label": "Stadion / Grossveranstaltungsort (Intensitätsstufe 3 – extrem)",
-          "raeumliche_ausdehnung": "Lokal; hohes Personenaufkommen (Tausende); Massenanfall Verletzter; weiträumige Sperrzone"
-        }
-      ]
-    },
-    "Anschlag mit toxischer Industriechemikalie": {
+    "Anschlag toxische Industriechemikalie": {
       "id": "39",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
@@ -618,12 +634,16 @@
           "raeumliche_ausdehnung": "Gebäudekomplex; Abluftzone im Abwindgebiet; keine Gesundheitsgefahr aussen nach ~1 h"
         },
         {
-          "label": "Tiefbahnhof / Untergrundbahnhof (Intensitätsstufe 3 – extrem)",
-          "raeumliche_ausdehnung": "Lokal; geschlossener Raum erhöht Konzentration; Evakuierung erschwert; Massenanfall Verletzter"
+          "label": "Hauptbahnhof einer grösseren Schweizer Stadt (Hauptpendlerzeit, Werktag morgens)",
+          "raeumliche_ausdehnung": "Bahnhofsareal + unmittelbare Umgebung; Sperrzone und Rettungsachsen in der Innenstadt"
         },
         {
-          "label": "Mehrfamilienhaus / Wohngebäude (Intensitätsstufe 1 – erheblich)",
-          "raeumliche_ausdehnung": "Lokal; Lüftungsanlage als Einbringungspunkt; Evakuierung Gebäude; begrenzte Aussenwirkung"
+          "label": "Abflughalle eines grossen Flughafens (~200 Personen)",
+          "raeumliche_ausdehnung": "Betroffener Gebäudeflügel + schrittweise gesamter Flughafen evakuiert; Flugbetrieb eingestellt"
+        },
+        {
+          "label": "Öffentlicher Platz / Grossveranstaltung",
+          "raeumliche_ausdehnung": "Lokal; hohes Personenaufkommen; weiträumige Kontaminationszone; Dekontamination Strassen und Gebäude"
         }
       ]
     },
@@ -672,7 +692,7 @@
           "raeumliche_ausdehnung": "Lokal bis regional; eskalierend; öffentliche Plätze, Behördengebäude, Detailhandel betroffen"
         },
         {
-          "label": "Öffentliche Plätze / Demonstrationsrouten",
+          "label": "Öffentliche Verkehrswege und -Knotenpunkte. Bahnhöfe und Flughäfen",
           "raeumliche_ausdehnung": "Lokal; Sperrungen; Polizeieinsatz; Schäden an Gebäuden und Infrastruktur"
         }
       ]
