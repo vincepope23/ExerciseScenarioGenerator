@@ -1,5 +1,8 @@
+from datetime import datetime
+import re
+
 from scenariogenerator.backend.load_schauplatz_options import load_schauplatz_options, load_ausdehnung
-from scenariogenerator.constants import GEFAHR_OPTIONS, MISTRAL_API_KEY
+from scenariogenerator.constants import GEFAHR_OPTIONS, MISTRAL_API_KEY, ROOT_DIR
 from scenariogenerator.backend.llm_client import llm_client_factory
 from scenariogenerator.backend.load_prompts import load_szenario_verlauf_prompt, load_user_input_prompt
 from scenariogenerator.backend.load_sources import get_all_relevant_texts
@@ -23,6 +26,12 @@ def generate_szenario(gefahr: str, location: str, user_input: str, model) -> str
     text_var_dict["hauptschauplatz"] = location
     text_var_dict["räumliche_ausdehnung"] = load_ausdehnung(gefahr, location)
     complete_prompt = scenario_prompt.format(**text_var_dict)
-    print(complete_prompt)
-    print(len(complete_prompt))
-    return client.query(complete_prompt)
+
+    response = client.query(complete_prompt)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    sanitized_location = re.sub(r"[^a-zA-Z0-9]", "", location)
+    output_path = ROOT_DIR / f"scenarios/{timestamp}_{gefahr}_{sanitized_location}.md"
+    output_path.write_text(response, encoding="utf-8")
+
+    return response

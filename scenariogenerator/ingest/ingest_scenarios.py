@@ -68,7 +68,8 @@ class ScenarioIngestor:
         index_md_all = "# Gefährdungsszenarien\n\n"
         index_md_all_path = self.main_dir / "Gefährdungsszenarien_index.md"
 
-        for md_file_path in self.source_dir.glob("*.md"):
+        md_files = list(self.source_dir.glob("*.md"))
+        for md_file_path in tqdm(md_files, total=len(md_files)):
             print(md_file_path)
             md_text = md_file_path.read_text(encoding="utf-8")
             analyze_response = self.llm_client.query(analyze_prompt.format(text = md_text))
@@ -82,6 +83,8 @@ class ScenarioIngestor:
             index_md_gefahr_path = self.main_dir / f"{gefahr}_index.md"
             index_md_all += f"- [{scenario_dict['Gefahr']}]({index_md_gefahr_path.name})\n"
 
+            if index_md_gefahr_path.exists():
+                continue
 
             index_md_gefahr = f"# {scenario_dict['Gefahr']}\n\n"
             for aspect in tqdm(self.index_keys):

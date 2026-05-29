@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import Optional
 
+import httpx
+
+
 class LLMClient(ABC):
     def __init__(self, model_name: str, api_token: Optional[str] = None):
         self.model_name = model_name
@@ -15,6 +18,8 @@ class LLMClientMistral(LLMClient):
         super().__init__(model_name, api_token)
         from mistralai.client import Mistral
         self.client = Mistral(api_key=api_token)
+        # Patch the internal HTTP client
+        self.client._client = httpx.Client(timeout=180.0)
 
     def query(self, prompt: str) -> str:
         response = self.client.chat.complete(
@@ -34,7 +39,7 @@ class LLMClientClaude(LLMClient):
     def query(self, prompt: str) -> str:
         response = self.client.messages.create(
             model=self.model_name,
-            max_tokens=1024,
+            max_tokens=20000,
             messages=[{"role": "user", "content": prompt}]
         )
         return response.content[0].text

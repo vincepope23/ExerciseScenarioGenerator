@@ -225,7 +225,7 @@
         }
       ]
     },
-    "Ausbreitung invasiver Arten": {
+    "Invasive Arten": {
       "id": "14",
       "kategorie": "Naturgefahren",
       "hauptschauplätze": [
@@ -271,7 +271,7 @@
         }
       ]
     },
-    "Absturz Luftfahrtobjekt": {
+    "Flugzeugabsturz": {
       "id": "17",
       "kategorie": "Technische Unfälle",
       "hauptschauplätze": [
@@ -357,7 +357,7 @@
         }
       ]
     },
-    "Einschränkung Schiffsverkehr": {
+    "Schiffsverkehrseinschränkungen": {
       "id": "30",
       "kategorie": "Technische Unfälle",
       "hauptschauplätze": [
@@ -441,7 +441,7 @@
         }
       ]
     },
-    "Ausfall Mobilfunk": {
+    "Mobilfunkausfall": {
       "id": "29",
       "kategorie": "Versorgungsausfälle",
       "hauptschauplätze": [
@@ -483,7 +483,7 @@
         }
       ]
     },
-    "Unfall B-Betrieb": {
+    "Biologischer Unfall": {
       "id": "20",
       "kategorie": "B-Szenarien",
       "hauptschauplätze": [
@@ -559,7 +559,7 @@
         }
       ]
     },
-    "Anschlag mit konventionellen Mitteln": {
+    "Terroranschlag": {
       "id": "33",
       "kategorie": "Anschläge",
       "hauptschauplätze": [
