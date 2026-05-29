@@ -1,6 +1,7 @@
 # Gefährdungsszenarien
 
 - [Starkregen](Starkregen_index.md)
+- [Erdbeben](Erdbeben_index.md)
 - [Chemischer Anschlag](Chemischer_Anschlag_index.md)
 - [Hagelschlag](Hagelschlag_index.md)
 - [Erdölmangellage](Erdölmangellage_index.md)

@@ -21,6 +21,7 @@ dependencies = [
     "streamlit",
     "openai",
     "anthropic",  # Required for claude-api
+    "tqdm"
 ]
 
 [project.optional-dependencies]

@@ -1,23 +1,13 @@
 import io
+import json
 import time
 from pathlib import Path
+from tqdm import tqdm
 
 import pdfplumber
 
 from scenariogenerator.backend.llm_client import llm_client_factory
 from scenariogenerator.constants import DATA_DIR, PROMPTS_DIR, MISTRAL_API_KEY
-
-index_keys = [
-    "Rollen",
-    "Hilfsmittel",
-    "Massnahmen",
-    "Rechtsgrundlagen",
-    "Phasen",
-    "Schwerestufen",
-    "Auswirkungen",
-    "Einflussfaktoren",
-    "Ereignisbeispiele"
-]
 
 def pdf_to_md_text(file_path: Path):
     with open(file_path, "rb") as f:
@@ -31,106 +21,84 @@ def pdf_to_md_text(file_path: Path):
                 text += page_text + "\n"
     return text
 
-def save_pdfs_as_md_files():
-    source_dir = DATA_DIR / 'Gefährdungsszenarien'
+# def get_ingest_prompt(file_name):
+#     file_path = PROMPTS_DIR / file_name
+#     with open(file_path, "r", encoding="utf-8") as f:
+#         text = f.read()
+#         return text
 
-    for file_path in source_dir.iterdir():
-        if not file_path.suffix.lower() == '.pdf':
-            continue
+class ScenarioIngestor:
 
-        md_file_path_source = source_dir / file_path.with_suffix(".md").name
-        if md_file_path_source.exists():
-            continue
+    index_keys = [
+        "Rollen",
+        "Hilfsmittel",
+        "Massnahmen",
+        "Rechtsgrundlagen",
+        "Phasen",
+        "Schwerestufen",
+        "Auswirkungen",
+        "Einflussfaktoren",
+        "Ereignisbeispiele"
+    ]
 
-        md_text = pdf_to_md_text(file_path)
+    def __init__(self):
+        self.llm_client = llm_client_factory("mistral", MISTRAL_API_KEY)
+        self.source_dir = DATA_DIR / 'Gefährdungsszenarien'
+        self.main_dir = DATA_DIR
 
-        with open(md_file_path_source, "w", encoding="utf-8") as f:
-            f.write(md_text)
-        print(f"Markdown-Datei gespeichert unter: {md_file_path_source}")
+    def save_pdfs_as_md_files(self):
+        for file_path in self.source_dir.iterdir():
+            if not file_path.suffix.lower() == '.pdf':
+                continue
+            md_file_path_source = self.source_dir / file_path.with_suffix(".md").name
+            if md_file_path_source.exists():
+                continue
+            md_text = pdf_to_md_text(file_path)
+            with open(md_file_path_source, "w", encoding="utf-8") as f:
+                f.write(md_text)
+            print(f"Markdown-Datei gespeichert unter: {md_file_path_source}")
 
-def get_analyze_scenario_prompt():
-    file_path = PROMPTS_DIR / "analyze_szenario_prompt.txt"
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
-        return text
+    def ingest_all(self):
+        print('Start ingesting scenarios')
+        self.save_pdfs_as_md_files()
+        analyze_prompt = self._load_prompt("analyze_szenario_prompt.txt")
+        json_prompt = self._load_prompt("md_to_json_prompt.txt")
+        aspect_prompt = self._load_prompt("summarize_aspect_prompt.txt")
 
-def get_md_to_json_prompt():
-    file_path = PROMPTS_DIR / "md_to_json_prompt.md"
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
+        index_md_all = "# Gefährdungsszenarien\n\n"
+        index_md_all_path = self.main_dir / "Gefährdungsszenarien_index.md"
 
-def get_aspect_detail_prompt():
-    file_path = PROMPTS_DIR / "summarize_aspect_prompt.txt"
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
+        for md_file_path in self.source_dir.glob("*.md"):
+            print(md_file_path)
+            md_text = md_file_path.read_text(encoding="utf-8")
+            analyze_response = self.llm_client.query(analyze_prompt.format(text = md_text))
+            print(f'Analyze response: {len(analyze_response)}')
+            json_response = self.llm_client.query(json_prompt.format(text = analyze_response))
+            print(f'JSON response: {len(json_response)}')
+            scenario_dict = json.loads(json_response)
+            scenario_dict["Quelle"] = str(self.source_dir / md_file_path.with_suffix(".pdf").name)
+            gefahr = scenario_dict["Gefahr"].replace(" ", "_")
+            print(gefahr)
+            index_md_gefahr_path = self.main_dir / f"{gefahr}_index.md"
+            index_md_all += f"- [{scenario_dict['Gefahr']}]({index_md_gefahr_path.name})\n"
 
-def analyze_scenario(md_text_raw):
-    prompt = get_analyze_scenario_prompt().format(md_text_raw)
-    client = llm_client_factory("mistral", MISTRAL_API_KEY)
-    response = client.chat.complete(
-        model="mistral-large-latest",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-    )
-    return response.choices[0].message.content
 
-def extract_aspect_json_from_scenario_md(md_text_scenario):
-    prompt_json = get_md_to_json_prompt.format(md_text_scenario)
-    client = llm_client_factory("mistral", MISTRAL_API_KEY)
-    response = client.chat.complete(
-        model="mistral-large-latest",
-        messages=[
-            {"role": "user", "content": prompt_json}
-        ],
-    )
-    return response.choices[0].message.content
+            index_md_gefahr = f"# {scenario_dict['Gefahr']}\n\n"
+            for aspect in tqdm(self.index_keys):
+                detail_path = self.main_dir / f"{gefahr}_{aspect}.md"
+                index_md_gefahr += f"- [{aspect}]({detail_path.name})\n"
+                if detail_path.exists():
+                    continue
+                aspect_response = self.llm_client.query(aspect_prompt.format(item=aspect, text=md_text))
+                time.sleep(20)
+                detail_path.write_text(
+                    f"Quelle:[{scenario_dict['Quelle']}]({scenario_dict['Quelle']})\n\n## {aspect}\n\n{aspect_response}",
+                    encoding="utf-8")
 
-def summarize_aspects(json_dict, md_text_scenario):
-    md_content_all = "# Gefährdungsszenarien\n\n"
-    gefahr = json_dict['Gefahr']
-    gefahr = gefahr.replace(' ', '_')
-    gefahr_file = DATA_DIR / Path(gefahr + '_index.md')
-    json_dict[gefahr] = gefahr_file
-    md_content_all += f"- [{json_dict['Gefahr']}]({Path(gefahr + '_index.md')})\n"
-    md_content_szenario = f"# {json_dict['Gefahr']}\n\n"
+            index_md_gefahr_path.write_text(index_md_gefahr, encoding="utf-8")
+            print(index_md_all)
 
-    prompt_template = get_aspect_detail_prompt()
-    for key in index_keys:
-        output_path_detail = str(DATA_DIR / Path(f"{gefahr}_{key}.md"))
-        md_content_szenario += f"- [{key}]({output_path_detail.split('/')[-1]})\n"
-        response_collection = []
+        index_md_all_path.write_text(index_md_all, encoding="utf-8")
 
-        if Path(output_path_detail).exists():
-            print(f"{output_path_detail} existiert bereits")
-            continue
-
-        for item in json_dict[key]:
-            print(item)
-
-            detail_prompt = prompt_template.format(md_text_scenario, item)
-
-            client = llm_client_factory("mistral", MISTRAL_API_KEY)
-            response_detail = client.chat.complete(
-                model="mistral-large-latest",
-                messages=[
-                    {"role": "user", "content": detail_prompt}
-                ],
-            ).choices[0].message.content
-            time.sleep(30)
-
-            response_detail = f"## {item}\n\n{response_detail}"
-            print(response_detail)
-            response_collection.append(response_detail)
-
-            combined_text = f" # {key}\n\n {"\n\n".join(response_collection)}"
-
-            with open(output_path_detail, "w", encoding="utf-8") as f:
-                f.write(f"Quelle:[{json_dict['Quelle']}]({json_dict['Quelle']})\n\n{combined_text}")
-
-        with open(gefahr_file, "w", encoding="utf-8") as f:
-            f.write(md_content_szenario)
-
-    output_path = DATA_DIR / Path("Gefährdungsszenarien_index.md")
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(md_content_all)
+    def _load_prompt(self, filename: str) -> str:
+        return (PROMPTS_DIR / filename).read_text(encoding="utf-8")
