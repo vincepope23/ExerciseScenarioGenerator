@@ -7,6 +7,12 @@ from scenariogenerator.backend.user_actions import get_gefahr_options, generate_
     get_user_input_prompt
 from scenariogenerator.constants import ROOT_DIR
 
+st.set_page_config(
+    page_title="Exercise Scenario Generator",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 load_dotenv()
 api_token = os.getenv("MISTRAL_API_KEY")
 
