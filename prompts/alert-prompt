@@ -1,0 +1,10 @@
+Bitte generiere für jedes 'event' oder Ereginis im Szenario eine Meldung entlang folgender Struktur:
+
+Was ist passiert (Ereignisart, Schadensbild)
+Wo (Ort)
+Wann (Zeitstempel)
+Wer meldet (Absenderstelle)
+Beurteilung der Lage
+Massnahmen / angeforderte Mittel
+
+Bei dem Ort 
