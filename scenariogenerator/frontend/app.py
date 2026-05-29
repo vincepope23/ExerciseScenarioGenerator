@@ -88,6 +88,7 @@ with left_col:
     
     # 4. CREATE Button (Syntax fix applied here)
     if st.button("CREATE"):
+
         st.session_state.generated_scenario = generate_szenario(editable_prompt, "mistral", api_token)
 
 # --- RIGHT COLUMN: THE SIDEBAR PANEL ---
