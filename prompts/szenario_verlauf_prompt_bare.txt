@@ -29,6 +29,13 @@ Beachte ausserdem folgende Userinput:
 
 ---
 
+Beachte bei der Kreierung des Szenarios auf die Wahl der {location}:
+
+Dies sind die Eigenschaften zu der gewählten {location}:
+{location_eigenschaften}
+
+---
+
 Das Szenario beschreibt ausschliesslich den Tatsachenverlauf – so, als würde niemand eingreifen.
 
 Enthalten sein muss:
