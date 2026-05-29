@@ -1,4 +1,4 @@
-Bitte generiere für jedes 'event' oder Ereginis im Szenario eine Meldung entlang folgender Struktur:
+Bitte generiere für jedes 'event' oder Ereginis (für jeden bulletpoint in den verschiedenen Phasen) im Szenario eine Meldung entlang folgender Struktur:
 
 Was ist passiert (Ereignisart, Schadensbild)
 Wo (Ort)
@@ -7,4 +7,4 @@ Wer meldet (Absenderstelle)
 Beurteilung der Lage
 Massnahmen / angeforderte Mittel
 
-Bei dem Ort 
+Bitte nimm so viele Informationen aus dem Szenario oder {text} wie möglich. Wo keine Informationen vorhanden sind, triff Annahmen, pass dabei auf den Zeitlichen Verklauf auf, dass die Meldungen logisch aufeinander folgen.
