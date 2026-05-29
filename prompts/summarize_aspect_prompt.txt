@@ -1,0 +1,5 @@
+Was sagt der folgende Text über {item}?
+
+Beantworte ausschliesslich die Frage. Bleibe kurz und knapp, aber auch präzise.
+
+Hier ist der Text: {text}
