@@ -1,12 +1,21 @@
 import streamlit as st
 from scenariogenerator.backend.user_actions import get_gefahr_options, get_prompt, generate_szenario
-# Change for change's sake
+from dotenv import load_dotenv
+import os
+load_dotenv()
+api_token = os.getenv("MISTRAL_API_KEY")
 
-# Set up page layout to wide to comfortably fit the side-by-side design
-st.set_page_config(
-    page_title="Exercise Scenario Generator",
-    layout="wide"
-)
+# --- HEADER: IMAGE AND TITLE ON THE SAME HEIGHT ---
+header_left, header_right = st.columns([1, 2], vertical_alignment="center")
+
+with header_left:
+    # Make sure the image file name matches exactly what you have in your folder
+    st.image("header für front-end.png", use_container_width=True)
+    
+with header_right:
+    st.title("Exercise Scenario Generator")
+
+st.write("---") # Adds the horizontal dividing line below the header
 
 # Custom CSS to mimic a modern app frame with a distinct right sidebar panel
 st.markdown("""
@@ -39,8 +48,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("Exercise Scenario Generator")
-st.write("---")
+# *** REMOVED DUPLICATE TITLE HERE ***
 
 # Initialize session state so the scenario persists across browser updates
 if "generated_scenario" not in st.session_state:
@@ -62,7 +70,6 @@ with left_col:
     st.subheader("Szenario")
     
     # 1. Gefahr Dropdown
-     #gefahr_options = ["Lawinen", "Überflutung", "Gletscherabbruch", "Erdbeben", "Steinschlag"]
     gefahr_options = get_gefahr_options()
     selected_gefahr = st.selectbox("Gefahr (Hazard)", gefahr_options)
     
@@ -72,12 +79,6 @@ with left_col:
     
     # NEW FEATURE: Refresh Button for the Prompt
     if st.button("Aktuellisieren"):
-        # st.session_state.ausgangslage_text = (
-        #     f"Aufgrund des Ereignisses '{selected_gefahr}' in der Region {selected_locato} "
-        #    f"ist die Lage unübersichtlich. Erste zivile Notrufe gehen ein, und die "
-        #    f"wichtigsten Zufahrtsstrassen sind aktuell nicht passierbar. Die Blaulichtorganisationen "
-        #     f"benötigen umgehend Anweisungen zur Priorisierung."
-        # )
         st.session_state.ausgangslage_text = get_prompt(selected_gefahr)
 
     # 3. Prompt text editable (Ausgangslage) - Now tied to session_state key
@@ -87,15 +88,7 @@ with left_col:
     
     # 4. CREATE Button (Syntax fix applied here)
     if st.button("CREATE"):
-        st.session_state.generated_scenario = f"""
-### 🚨 Szenario: Krisenfall in {selected_locato}
-
-**Ausgangslage:** {editable_prompt}
-
-**Ereignis:** In der Region **{selected_locato}** hat sich eine kritische Situation durch das Ereignis **{selected_gefahr}** entwickelt.
-
-**Auswirkungen:** Wichtige Verkehrsachsen sind blockiert. Die lokalen Einsatzkräfte (Blaulichtorganisationen) koordinieren sich eng mit dem zuständigen Führungsstab. Die Lage erfordert die sofortige Priorisierung von Schutzmassnahmen und eine rasche Ressourceneinteilung vor Ort.
-"""
+        st.session_state.generated_scenario = generate_szenario(editable_prompt, "mistral", api_token)
 
 # --- RIGHT COLUMN: THE SIDEBAR PANEL ---
 with right_col:
@@ -105,5 +98,4 @@ with right_col:
     st.markdown(
         f'<div class="scenario-box">{st.session_state.generated_scenario}</div>', 
         unsafe_allow_html=True
-
     )
