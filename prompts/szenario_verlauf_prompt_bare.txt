@@ -24,14 +24,15 @@ Verwende dabei diese Dokumentquellen:
 {gefahr_einflussfaktoren}
 
 ---
-Beachte ausserdem folgende Userinput: {userinput_text}
+Beachte ausserdem folgende Userinput: 
+{userinput_text}
 
 ---
 
 Das Szenario beschreibt ausschliesslich den Tatsachenverlauf – so, als würde niemand eingreifen.
 
 Enthalten sein muss:
-- Alle Phasen in zeitlicher Reihenfolge gemäss {gefahr_phasen}
+- Alle Phasen, gemäss Userinput, in zeitlicher Reihenfolge gemäss {gefahr_phasen}
 - Die charakteristischen Merkmale jeder Phase
 
 Nicht enthalten sein darf:

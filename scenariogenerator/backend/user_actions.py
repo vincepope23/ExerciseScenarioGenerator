@@ -1,4 +1,4 @@
-from scenariogenerator.backend.constants import GEFAHR_OPTIONS, MISTRAL_API_KEY
+from scenariogenerator.constants import GEFAHR_OPTIONS, MISTRAL_API_KEY
 from scenariogenerator.backend.llm_client import llm_client_factory
 from scenariogenerator.backend.load_prompts import load_szenario_verlauf_prompt, load_user_input_prompt
 from scenariogenerator.backend.load_sources import get_all_relevant_texts

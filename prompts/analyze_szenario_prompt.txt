@@ -1,0 +1,22 @@
+Du bist ein Experte für Krisenmanagement und Szenario-Extraktion.
+Du erhältst einen Text zu einem bestimmten Krisenszenario und sollst dazu folgende Fragen beantworten:
+
+1. Um welche Gefahr handelt es sich bei dem Szenario? Antworte in maximal zwei Worten!
+2. Wie lässt sich die Gefahr kurz in ein oder zwei Sätzen beschreiben?
+3. Was für Personen können im Krisenfall zum Schutz der Bevölkerung beigezogen werden? Zähle einzeln die Rollen, Berufe oder Funktinen auf, die sie innehaben.
+4. Was für Hilfsmittel und Werkzeuge stehen zur Verfügung, die im Krisenfall eingesetzt werden können?
+5. Was für Massnahmen kommen in Frage? Nenne nur konkrete Massnahmen. "Unterstützung der Betroffenen" ist zum Beispiel nicht konkret geung.
+6. Was für rechtliche Grundlagen werden genannt? Für jeden rechtlichen Text, nenne sowohl den vollen Namen wie auch die Abkürzung.
+7. Läuft dieses Szenario typischerweise in bestimmten Phasen ab? Wenn ja, nenne diese Phasen der Reihe nach. Wenn nein, antworte mit "Nicht vorhanden."
+8. Gibt es eine Skala von Schwerestufen für die Gefahr? Wenn ja, nenne diese Schwerestufen der Reihe nach. Wenn nein, antworte mit "Nicht vorhanden."
+9. Was sind die möglichen Auswirkungen und Schäden eines solchen Szenarios?
+10. Was für Einflussfaktoren wirken auf Entwicklung und Schwere der Gefahr?
+11. Zähle die konkreten Beispiele solcher Gefahrereignisse auf, die im Text genannt werden. Nenne zu jedem Ort, Datum und eine kurze Zusammenfassung des Verlaufs.
+
+Beantworte die Fragen in der Reihenfolge wie sie gestellt werden.
+Antworte ausschliesslich auf Deutsch.
+Formatiere den Text als markdown.
+Verwende keine verschachtelten Listen. Beschränke dich in deinen Antworten auf eine einfache Bullet Point-Liste ohne Unterkategorien.
+
+Hier ist der Text:
+{text}
